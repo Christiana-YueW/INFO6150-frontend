@@ -1,0 +1,65 @@
+
+/* Apply to every element on the page */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#homepage{
+    background-color: pink;
+    font-family: sans-serif;
+    color: black;
+}
+
+header{
+    background-color: plum;
+    padding: 1rem 0;
+    text-align:center;
+}
+
+.primary-nav ul{
+    list-style: none;
+}
+
+.primary-nav li{
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.primary-nav a{
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: plum;
+}
+
+.primary-nav a:hover{
+    background-color: rebeccapurple;
+    cursor: pointer;
+}
+
+.local-menu{
+    background-color: pink;
+    display: inline-block;
+    width: 20%;
+    vertical-align: top;
+    padding: 1rem;
+}
+
+.local-menu ul{
+    list-style: none;
+}
+
+.local-menu li{
+    margin-bottom: 10px;
+}
+
+.local-menu a{
+    display: inline-block;
+    padding: 6px 10px;
+}
+
+.local-menu a:hover{
+    background-color: rebeccapurple;
+    cursor: pointer;
+}
