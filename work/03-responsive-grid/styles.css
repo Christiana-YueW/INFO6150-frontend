@@ -14,8 +14,6 @@ body {
     min-height: 100vh;
 }
 
-
-
 /* header */
 .page-header {
     display: grid;
@@ -35,7 +33,7 @@ body {
 }
 
 .site-title {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
 
     color: Tomato;
@@ -56,4 +54,114 @@ body {
 
     color: Coral;
     font-weight: bold;
+}
+
+/* Main */
+.page-content {
+    padding: 2rem 1rem;
+}
+
+.page-content h2{
+    font-size: 1.5rem;
+    text-align: center;
+
+    margin-bottom: 1rem;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.card {
+    display: grid;
+
+    background-color: #fff;
+
+    grid-template-columns: auto auto 1fr auto;
+    gap: 1rem;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.card-image {
+    width: 100%;
+    height: auto;
+    border-radius: 0.25rem;
+}
+
+.card h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+    color: cornflowerblue;
+}
+
+.card p {
+    margin: 1rem 0;
+    font-size: 1rem;
+}
+
+.read-more {
+    justify-self: start;
+    padding: 0.5rem 1rem;
+
+    background-color: antiquewhite;
+    text-decoration: none;
+    font-weight: bold;
+
+    border-radius: 0.25rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Footer */
+.page-footer {
+    background-color: #333;
+    color: #fff;
+
+    padding: 1.5rem 1rem;
+}
+
+.footer-nav {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.5rem;
+
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.footer-nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* change to desktop view */
+@media (min-width: 50rem) {
+    .main-nav .menu {
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 1.5rem;
+    }
+
+    .cards-grid {
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    .card {
+        grid-column: span 4;
+    }
+
+    .footer-nav {
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    .footer-nav a {
+        grid-column: span 4;
+    }
 }
