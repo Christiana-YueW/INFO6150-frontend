@@ -13,8 +13,6 @@ body {
 
     font-size: 1rem;
     color: #333;
-
-
 }
 
 /* header */
@@ -52,6 +50,7 @@ body {
 /* mobile view vertical */
 .main-nav {
     margin-top: 0.5rem;
+    width: 100%;
 }
 
 .main-nav .menu {
@@ -63,6 +62,9 @@ body {
 }
 
 .main-nav .menu a {
+    display: block;
+    padding: 0.5rem;
+
     text-decoration: none;
     font-weight: bold;
     font-size: 1.25rem;
@@ -72,6 +74,7 @@ body {
 
 /* Main */
 .page-content {
+    flex: 1;
     padding: 2rem 1rem;
     max-width: 100%;
     margin: 0 auto;
@@ -113,6 +116,7 @@ body {
 .card-content {
     display: flex;
     flex-direction: column;
+    flex: 1;
 
     text-align: center;
 }
@@ -126,6 +130,8 @@ body {
 
 .card p {
     margin: 0 0 1rem 0;
+    flex:1;
+
     font-size: 1.1rem;
 }
 
@@ -143,6 +149,10 @@ body {
     border-radius: 0.25rem;
 }
 
+.read-more:hover {
+    background-color: #333;
+}
+
 /* Footer */
 .page-footer {
     background-color: #333;
@@ -153,6 +163,7 @@ body {
 
 .footer-nav {
     display: grid;
+    grid-template-columns: 1fr;
 
     gap: 0.5rem;
 
@@ -168,6 +179,10 @@ body {
     text-decoration: none;
     font-size: 0.8rem;
     text-align: center;
+}
+
+.footer-nav a:hover {
+    color: cornflowerblue;
 }
 
 /* change to desktop view */
@@ -197,9 +212,8 @@ body {
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        gap: 25rem;
+        gap: 2rem;
         width: 100%;
-
     }
 
     .page-content {
