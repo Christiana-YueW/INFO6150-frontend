@@ -1,0 +1,59 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1.5;
+    background-color: #f4f4f4;
+    color: #333;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    min-height: 100vh;
+}
+
+
+
+/* header */
+.page-header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+
+    border-bottom: 1px solid #ccc;
+}
+
+.logo {
+
+    width: 4rem;
+    height: auto;
+}
+
+.site-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+
+    color: Tomato;
+}
+
+.main-nav .menu {
+    display: flex;
+    flex-direction: row;
+
+    gap: 1rem;
+    margin-top: 1rem;
+
+    list-style: none;
+}
+
+.main-nav .menu a {
+    text-decoration: none;
+
+    color: Coral;
+    font-weight: bold;
+}
