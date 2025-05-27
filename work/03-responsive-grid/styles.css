@@ -190,6 +190,7 @@ body {
     .main-nav{
         margin-top: 1rem;
         width: 100%;
+        background-color: beige;
     }
 
     .main-nav .menu {
@@ -223,3 +224,4 @@ body {
         grid-column: span 4;
     }
 }
+
