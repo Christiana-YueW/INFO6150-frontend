@@ -1,0 +1,241 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1.5;
+    min-height: 100vh;
+
+    background-color: #f4f4f4;
+
+    font-size: 1rem;
+    color: #333;
+}
+
+/* header */
+.page-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+
+    background-color: #fff;
+
+    border-bottom: 0.0625rem solid #ccc;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: column;
+    text-align: center;
+}
+
+.logo {
+    width: 8rem;
+    height: auto;
+}
+
+.site-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+
+    color: Tomato;
+}
+
+/* mobile view vertical */
+.main-nav {
+    margin-top: 0.5rem;
+    width: 100%;
+}
+
+.main-nav .menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    list-style: none;
+}
+
+.main-nav .menu a {
+    display: block;
+    padding: 0.5rem;
+
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.25rem;
+
+    color: Coral;
+}
+
+/* Main */
+.page-content {
+    flex: 1;
+    padding: 2rem 1rem;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.page-content h2{
+    font-size: 2rem;
+    text-align: center;
+
+    margin: 0 0 2rem 0;
+    color: cornflowerblue;
+}
+
+.cards-grid {
+    display: grid;
+    gap: 2rem;
+
+    grid-template-columns:1fr;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+
+    background-color: #fff;
+
+    border-radius: 0.5rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.1);
+}
+
+.card-img {
+    width: 100%;
+    height: auto;
+
+    border-radius: 0.25rem;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    text-align: center;
+}
+
+.card h3 {
+    margin: 1rem 0 0.5rem 0;
+    font-size: 1.25rem;
+
+    color: cornflowerblue;
+}
+
+.card p {
+    margin: 0 0 1rem 0;
+    flex:1;
+
+    font-size: 1.1rem;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: auto;
+    padding: 0.5rem 1rem;
+
+    background-color: cornflowerblue;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+
+    border-radius: 0.25rem;
+}
+
+.read-more:hover {
+    background-color: #333;
+}
+
+/* Footer */
+.page-footer {
+    background-color: #333;
+    color: #fff;
+
+    padding: 1rem;
+}
+
+.footer-nav {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    gap: 0.5rem;
+
+    text-align: center;
+
+}
+
+.footer-nav a {
+    grid-column: span 12;
+    padding: 0.1rem;
+
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.footer-nav a:hover {
+    color: cornflowerblue;
+}
+
+/* change to desktop view */
+@media (min-width: 50rem) {
+     .page-header {
+         flex-direction: column;
+         align-items: flex-start;
+         padding: 1.5rem 2rem;
+     }
+
+    .header-content {
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        text-align: left;
+        gap: 1rem;
+        width: auto;
+    }
+
+    .main-nav{
+        margin-top: 1rem;
+        width: 100%;
+        background-color: beige;
+    }
+
+    .main-nav .menu {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        width: 100%;
+    }
+
+    .page-content {
+        padding: 2rem;
+    }
+
+    .cards-grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 2rem;
+    }
+
+    .card {
+        grid-column: span 4;
+    }
+
+    .footer-nav {
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    .footer-nav a {
+        grid-column: span 4;
+    }
+}
+
