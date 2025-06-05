@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <header class="site-header">
+        <img src="http://placehold.co/200x100" alt="Cat Logo" class="logo"/>
+        <h1 class="site-title">New User Registration</h1>
+    </header>
+
+    <main class="site-content">
+        <form action="/submit" method="post" class="registration-form">
+            <fieldset>
+                <legend>Personal Information</legend>
+
+                <div class="field-container">
+                    <label for="name" class="label-name">
+                        Full Name: <span class="required">*Required</span>
+                    </label>
+                    <input id="name" name="name" type="text" class="form-input" placeholder="name" required/>
+                </div>
+
+                <div class="field-container">
+                    <label for="email" class="label-email">
+                        Email: <span class="required">*Required</span>
+                    </label>
+                    <input id="email" name="email" type="email" class="form-input" placeholder="Email" required/>
+                </div>
+
+                <div class="field-container">
+                    <label for="tier" class="label-tier">
+                        Subscription Tier: <span class="required">*Required</span>
+                    </label>
+                    <select id="tier" name="tier" class="form-select" required>
+                        <option value="" selected="selected">Please select</option>
+                        <option value="1">Silver Tier</option>
+                        <option value="2">Gold Tier</option>
+                        <option value="3">Platinum Tier</option>
+                    </select>
+                </div>
+
+                <div class="field-container">
+                    <input type="checkbox" class="form-checkbox" id="annoy-me" name="annoy-me" checked/>
+                    <label for="annoy-me" class="label-checkbox">Do you want us to send you annoying emails?</label>
+                </div>
+
+                <div class="field-container">
+                    <button type="submit" class="button-submit"> Register </button>
+                </div>
+
+            </fieldset>
+        </form>
+    </main>
+
+    <footer class="site-footer">
+        <p><a href="/privacy">Privacy Policy</a></p>
+    </footer>
+
+</body>
+</html>

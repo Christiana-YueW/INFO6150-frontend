@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    font-family: sans-serif;
+
+    height: 100%;
+    line-height: 1.6;
+
+    background-color: lavender;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header and footer*/
+header.site-header, footer.site-footer {
+    background-color: rosybrown;
+
+    padding: 1em;
+
+    text-align: center;
+}
+
+footer.site-footer a:hover {
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.logo {
+    margin: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.site-title {
+    margin-top: 0.5rem;
+
+    font-size: 2.5rem;
+}
+
+/* Main body */
+/* mobile view vertical */
+main.site-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1em;
+}
+
+.registration-form {
+    width: 100%;
+    max-width: 600px;
+    background-color: #ffffff;
+
+    padding: 1em;
+    border-radius: 6px;
+    box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+fieldset {
+    border:1px solid #cccccc;
+    padding: 1.5em;
+}
+
+legend {
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.field-container {
+    margin-bottom: 1.2em;
+}
+
+.form-label, .label-name, .label-email, .label-tier {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.3em;
+
+    font-size: 1rem;
+}
+
+.required {
+    font-weight: normal;
+    font-size: 0.8rem;
+    color: red;
+}
+
+.form-input, .form-select {
+    width: 100%;
+    padding: 0.2em 0.5em;
+
+    border: 1px solid #ccc;
+}
+
+.field-container input[type="checkbox"] {
+    margin-right: 0.5em;
+    vertical-align: middle;
+}
+
+.label-checkbox {
+    display: inline;
+    font-weight: normal;
+    font-size: 0.9rem;
+    vertical-align: middle;
+}
+
+.button-submit {
+    background-color: cadetblue;
+    color: white;
+    font-size: 0.8rem;
+
+    padding: 0.5em 0.5em;
+
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button-submit:hover {
+    background-color: #0056b3;
+}
+
+.field-container:last-child {
+    display: flex;
+    justify-content: center;
+}
+
+/* desktop view */
+@media (min-width: 700px) {
+    .field-container {
+        display: grid;
+
+        grid-template-columns: 1fr 2fr;
+        align-items: start;
+        gap: 1em;
+    }
+
+    .form-label, .label-name, .label-email, .label-tier {
+        text-align: right;
+        margin-bottom: 0;
+    }
+
+    .field-container input[type="checkbox"] {
+        grid-column: 1/2;
+        justify-self: end;
+        align-self: center;
+    }
+
+    .label-checkbox {
+        grid-column: 2/3;
+        justify-self: start;
+    }
+
+    .field-container:last-child {
+        grid-column: 1/3;
+    }
+}
