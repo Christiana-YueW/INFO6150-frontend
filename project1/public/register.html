@@ -2,9 +2,94 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Home - Horse World</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
+
 <body>
+  <header class="page-header">
+    <div class="header-content">
+        <a href="index.html" class="header-logo">
+            <img src="images/horse-logo.jpg" alt="running white horse" class="header-logo"/>
+        </a>
+        <h1 class="site-title">Horse World</h1>
+        <span class="material-symbols-outlined menu-icon" aria-label="Menu" tabindex="0">menu</span>
+    </div>
+
+    <nav class="main-nav">
+        <div class="nav-section">
+            <h2 class="nav-title">Menu</h2>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="register.html">Registration</a></li>
+            </ul>
+        </div>
+
+        <div class="nav-section">
+            <h2 class="nav-title">External Links</h2>
+            <ul class="external-links">
+                <li><a href="https://en.wikipedia.org/wiki/Horse">Wikipedia</a></li>
+                <li><a href="https://www.nationalgeographic.com/animals/mammals/facts/horse">National Geographic</a></li>
+                <li><a href="https://www.blm.gov/whb">Wild Horse and Burro Program</a></li>
+            </ul>
+        </div>
+    </nav>
+  </header>
+
+    <main class="site-content">
+        <h3 class="page-title">Register for Updates</h3>
+        <form action="/submit" method="post" class="registration-form">
+            <fieldset>
+                <legend>Personal Information</legend>
+
+                <div class="field-container">
+                    <label for="name" class="label-name">
+                        Full Name: <span class="required">*Required</span>
+                    </label>
+                    <input id="name" name="name" type="text" class="form-input" placeholder="name" required/>
+                </div>
+
+                <div class="field-container">
+                    <label for="email" class="label-email">
+                        Email: <span class="required">*Required</span>
+                    </label>
+                    <input id="email" name="email" type="email" class="form-input" placeholder="Email" required/>
+                </div>
+
+                <div class="field-container">
+                    <label for="tier" class="label-tier">
+                        Interested Content: <span class="required">*Required</span>
+                    </label>
+                    <select id="tier" name="tier" class="form-select" required>
+                        <option value="" selected="selected">Please select</option>
+                        <option value="1">Breed Profiles</option>
+                        <option value="2">Historical Insight</option>
+                        <option value="3">Knowledge Hub</option>
+                    </select>
+                </div>
+
+                <div class="field-container">
+                    <input type="checkbox" class="form-checkbox" id="subscription" name="subscription" checked/>
+                    <label for="subscription" class="label-checkbox">Do you want us to send you updates?</label>
+                </div>
+
+                <div class="field-container">
+                    <button type="submit" class="button-submit"> Register </button>
+                </div>
+
+            </fieldset>
+        </form>
+    </main>
+
+    <footer class="page-footer">
+        <nav class="footer-nav">
+            <a href="privacy.html">Privacy</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </footer>
 
 </body>
 </html>
