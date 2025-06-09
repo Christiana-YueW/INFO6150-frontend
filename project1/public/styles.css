@@ -20,10 +20,40 @@ body {
     color: #333;
 }
 
+/* 12-column grid system */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
+}
+
+.breed-cards, .history-cards {
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    gap:1rem;
+    margin-bottom: 2rem;
+}
+
+.col-1 {
+    grid-column: span 1;
+}
+.col-2 {
+    grid-column: span 2;
+}
+.col-3 {
+    grid-column: span 3;
+}
+.col-4 {
+    grid-column: span 4;
+}
+.col-6 {
+    grid-column: span 6;
+}
+.col-8 {
+    grid-column: span 9;
+}
+.col-12 {
+    grid-column: span 12;
 }
 
 /* Main Layout */
@@ -37,11 +67,15 @@ body {
 
 /* Header */
 .page-header {
+    position: relative;
+    z-index: 100;
+
     padding: 1rem;
     margin-bottom: 1rem;
     border-bottom: 2px solid #ccc;
 
     background-color: #fff;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
 }
 
 .header-top {
@@ -49,18 +83,21 @@ body {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+
     background-color: #eaeaea; /* lighter neutral color */
     padding: 1.5rem 1rem;
+
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .header-logo img {
-    height: 140px;
+    height: 160px;
     width: auto;
     border-radius: 6px;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    border: 0.125rem solid #ddd;
 }
 
 .site-title {
@@ -68,9 +105,13 @@ body {
     text-align: center;
     color: #111;
     margin: 0.5rem 1rem;
+    padding: 0.5rem;
 }
 
 .main-nav {
+    position: relative;
+    z-index: 200;
+
     background-color: #eaeaea;
     padding: 1rem;
     border-bottom-left-radius: 10px;
@@ -129,13 +170,13 @@ body {
     font-size: 1rem;
 }
 
-.dropdown-content a:hover {
+.dropdown-content a:hover, .dropdown-content a:focus {
     text-decoration: underline;
     color: #000;
     font-weight: 600;
 }
 
-.dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-content, .dropdown:focus-within .dropdown-content {
     display: block;
 }
 
@@ -148,6 +189,8 @@ body {
     font-size: 1.8rem;
     margin-bottom: 1rem;
     text-align: center;
+    padding: 0.5rem;
+    border-bottom: 0.15rem solid #ddd;
 }
 
 .page-content h2:nth-of-type(2) {
@@ -155,11 +198,12 @@ body {
 }
 
 /* Card Design */
-.cards-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    margin-top: 2rem;
+.breed-cards .card {
+    grid-column: span 6;
+}
+
+.history-cards .card {
+    grid-column: span 6;
 }
 
 .card {
@@ -167,15 +211,25 @@ body {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+    border: 0.0625rem solid #e0e0e0;
+    margin: 0.1rem;
+    padding: 0;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .card-image {
     width: 100%;
     height: auto;
+    border-bottom: 0.0625rem solid #e0e0e0;
 }
 
 .card-content {
-    padding: 0.2rem 1rem;
+    padding: 0.6rem 1rem;
     text-align: center;
 }
 
@@ -183,6 +237,8 @@ body {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
     text-align: center;
+
+    border-bottom: 0.0625rem solid #f0f0f0; /* Subtle separator */
 }
 
 .read-more {
@@ -193,7 +249,7 @@ body {
     color: #0066cc;
 }
 
-.read-more:hover {
+.read-more:hover, .read-more:focus {
     font-weight: bold;
     text-decoration: underline;
 }
@@ -210,11 +266,14 @@ body {
     margin: 0 1rem;
     color: #333;
     text-decoration: none;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
 }
 
-.footer-nav a:hover {
+.footer-nav a:hover, .footer-nav a:focus {
     text-decoration: underline;
     font-weight: bold;
+    background-color: #e8e8e8;
 }
 
 /* About Content */
@@ -222,6 +281,7 @@ body {
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
     line-height: 1.6;
+    padding: 0 1.8rem; /* Side padding for better reading */
 }
 
 /* Register Form */
@@ -231,7 +291,7 @@ main.site-content {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding: 1rem 1rem;
+    padding: 2rem 1rem;
 
 }
 
@@ -268,7 +328,7 @@ fieldset {
 legend {
     font-weight: bold;
     margin-bottom: 1rem;
-    font-size: 1.3rem;
+    font-size: 1.35rem;
     padding: 0 0.3rem;
 }
 
@@ -281,13 +341,13 @@ legend {
     font-weight: bold;
     margin-bottom: 0.3em;
 
-    font-size: 1rem;
+    font-size: 1.1rem;
 }
 
 .required {
     font-weight: normal;
     font-size: 0.8rem;
-    color: red;
+    color: #d32f2f;
 }
 
 .form-input, .form-select {
@@ -295,6 +355,12 @@ legend {
     padding: 0.2em 0.5em;
 
     border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.form-input:focus, .form-select:focus {
+    outline: 0.1rem solid #0066cc;
+    border-color: #0066cc;
 }
 
 .field-container input[type="checkbox"] {
@@ -312,20 +378,100 @@ legend {
 .button-submit {
     background-color: #333;
     color: #fff;
-    font-size: 1rem;
+    font-size: 0.9rem;
 
     padding: 0.6em 1.2em;
 
     border: none;
     border-radius: 5px;
     cursor: pointer;
+
 }
 
-.button-submit:hover {
+.button-submit:hover, .button-submit:focus {
     background-color: #555;
 }
 
 .field-container:last-child {
     display: flex;
     justify-content: center;
+}
+
+/* Desktop View  */
+@media (min-width: 700px) {
+    .header-top {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 1.2rem;
+        padding: 2rem 1rem;
+    }
+
+    .site-title {
+        font-size: 4rem;
+        text-align: center;
+    }
+
+    .nav-menu {
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 8rem;
+    }
+
+    .dropdown {
+        position: relative;
+    }
+
+    .dropdown-content {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 999;
+
+        background-color: #f9f9f9;
+        border: 1px solid #ccc;
+        box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+        display: none;
+        padding: 0.5rem 1rem;
+        min-width: 160px;
+
+        margin: 0;
+        list-style: none;
+    }
+
+    .dropdown:hover .dropdown-content, .dropdown:focus-within .dropdown-content {
+        display: block;
+    }
+
+    .dropdown span {
+        cursor: pointer;
+        font-weight: bold;
+        padding: 0.2rem 0.5rem;
+        display: block;
+        background-color: transparent;
+        transition: background-color 0.3s ease;
+    }
+
+  .dropdown-content a {
+    display: block;
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #f0f0f0;
+  }
+
+  /* Card Layout */
+    .history-cards .card {
+        grid-column: span 3;
+    }
+
+  .footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 1rem;
+  }
+
 }
