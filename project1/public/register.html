@@ -40,48 +40,51 @@
   </header>
 
     <main class="site-content">
-        <h2 class="page-title">Register for Updates</h2>
-        <form action="/submit" method="post" class="registration-form">
-            <fieldset>
-                <legend>Personal Information</legend>
+        <div class="container">
+            <h2 class="page-title">Register for Updates</h2>
+            <form action="/submit" method="post" class="registration-form">
+                <fieldset>
+                    <legend>Personal Information</legend>
 
-                <div class="field-container">
-                    <label for="name" class="label-name">
-                        Full Name: <span class="required">*Required</span>
-                    </label>
-                    <input id="name" name="name" type="text" class="form-input" placeholder="name" required/>
-                </div>
+                    <div class="field-container">
+                        <label for="name" class="label-name">
+                            Full Name: <span class="required">*Required</span>
+                        </label>
+                        <input id="name" name="name" type="text" class="form-input" placeholder="name" required/>
+                    </div>
 
-                <div class="field-container">
-                    <label for="email" class="label-email">
-                        Email: <span class="required">*Required</span>
-                    </label>
-                    <input id="email" name="email" type="email" class="form-input" placeholder="Email" required/>
-                </div>
+                    <div class="field-container">
+                        <label for="email" class="label-email">
+                            Email: <span class="required">*Required</span>
+                        </label>
+                        <input id="email" name="email" type="email" class="form-input" placeholder="Email" required/>
+                    </div>
 
-                <div class="field-container">
-                    <label for="tier" class="label-tier">
-                        Interested Content: <span class="required">*Required</span>
-                    </label>
-                    <select id="tier" name="tier" class="form-select" required>
-                        <option value="" selected="selected">Please select</option>
-                        <option value="1">Breed Profiles</option>
-                        <option value="2">Historical Insight</option>
-                        <option value="3">Knowledge Hub</option>
-                    </select>
-                </div>
+                    <div class="field-container">
+                        <label for="tier" class="label-tier">
+                            Interested Content: <span class="required">*Required</span>
+                        </label>
+                        <select id="tier" name="tier" class="form-select" required>
+                            <option value="" selected="selected">Please select</option>
+                            <option value="1">Breed Profiles</option>
+                            <option value="2">Historical Insight</option>
+                            <option value="3">Knowledge Hub</option>
+                        </select>
+                    </div>
 
-                <div class="field-container">
-                    <input type="checkbox" class="form-checkbox" id="subscription" name="subscription" checked/>
-                    <label for="subscription" class="label-checkbox">Do you want us to send you updates?</label>
-                </div>
+                    <div class="field-container">
+                        <input type="checkbox" class="form-checkbox" id="subscription" name="subscription" checked/>
+                        <label for="subscription" class="label-checkbox">Do you want us to send you updates?</label>
+                    </div>
 
-                <div class="field-container">
-                    <button type="submit" class="button-submit"> Register </button>
-                </div>
+                    <div class="field-container">
+                        <button type="submit" class="button-submit"> Register </button>
+                    </div>
 
-            </fieldset>
-        </form>
+
+                </fieldset>
+            </form>
+        </div>
     </main>
 
     <footer class="page-footer">
