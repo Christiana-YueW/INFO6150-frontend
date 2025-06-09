@@ -1,0 +1,331 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    font-family: Raleway, sans-serif;
+    line-height: 1.6;
+
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Main Layout */
+.main-content {
+    flex: 1;
+}
+
+.site-content {
+    flex: 1;
+}
+
+/* Header */
+.page-header {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #ccc;
+
+    background-color: #fff;
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #eaeaea; /* lighter neutral color */
+    padding: 1.5rem 1rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header-logo img {
+    height: 140px;
+    width: auto;
+    border-radius: 6px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+.site-title {
+    font-size: 3rem;
+    text-align: center;
+    color: #111;
+    margin: 0.5rem 1rem;
+}
+
+.main-nav {
+    background-color: #eaeaea;
+    padding: 1rem;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 0.1rem;
+}
+
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+
+    font-size: 22px;
+}
+
+.nav-menu > li {
+    position: relative;
+    padding: 0.5rem;
+}
+
+.nav-menu > li:hover {
+    background-color: #e0e0e0;
+}
+
+.nav-menu > li > span {
+  cursor: pointer;
+  font-weight: bold;
+    font-size: 1.2rem;
+    display: block;
+    color: #111;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.dropdown-content {
+    display: none;
+    list-style: none;
+    padding: 0.2rem 1rem;
+    margin-top: 0.2rem;
+    border-left: 2px solid #aaa;
+}
+
+.dropdown-content li {
+    padding: 0;
+}
+
+.dropdown-content a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+}
+
+.dropdown-content a:hover {
+    text-decoration: underline;
+    color: #000;
+    font-weight: 600;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Main Page Content */
+.main-content, .page-content {
+    padding: 1rem;
+}
+
+.page-content h2, .main-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.page-content h2:nth-of-type(2) {
+    margin-top: 3rem;
+}
+
+/* Card Design */
+.cards-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-image {
+    width: 100%;
+    height: auto;
+}
+
+.card-content {
+    padding: 0.2rem 1rem;
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 0.5rem;
+    text-decoration: none;
+
+    color: #0066cc;
+}
+
+.read-more:hover {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Footer */
+.page-footer {
+    margin-top: 0.6rem;
+    border-top: 1px solid #ccc;
+    padding: 1.2rem;
+    text-align: center;
+}
+
+.footer-nav a {
+    margin: 0 1rem;
+    color: #333;
+    text-decoration: none;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* About Content */
+.main-content p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+/* Register Form */
+main.site-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem 1rem;
+
+}
+
+.page-title {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 1.6rem;
+    margin-top: 0;
+    color: #333;
+}
+
+.main-content h2 {
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 2.5rem;
+}
+
+.registration-form {
+    width: 100%;
+    max-width: 600px;
+
+    padding: 1em;
+    border-radius: 6px;
+    box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+fieldset {
+    margin-bottom: 2rem;
+    border:1px solid #cccccc;
+    padding: 1.5em;
+    background-color: #fff;
+}
+
+legend {
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    padding: 0 0.3rem;
+}
+
+.field-container {
+    margin-bottom: 1.2em;
+}
+
+.form-label, .label-name, .label-email, .label-tier {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.3em;
+
+    font-size: 1rem;
+}
+
+.required {
+    font-weight: normal;
+    font-size: 0.8rem;
+    color: red;
+}
+
+.form-input, .form-select {
+    width: 100%;
+    padding: 0.2em 0.5em;
+
+    border: 1px solid #ccc;
+}
+
+.field-container input[type="checkbox"] {
+    margin-right: 0.5em;
+    vertical-align: middle;
+}
+
+.label-checkbox {
+    display: inline;
+    font-weight: normal;
+    font-size: 0.9rem;
+    vertical-align: middle;
+}
+
+.button-submit {
+    background-color: #333;
+    color: #fff;
+    font-size: 1rem;
+
+    padding: 0.6em 1.2em;
+
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button-submit:hover {
+    background-color: #555;
+}
+
+.field-container:last-child {
+    display: flex;
+    justify-content: center;
+}

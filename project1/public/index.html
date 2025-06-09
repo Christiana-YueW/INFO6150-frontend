@@ -10,114 +10,121 @@
 
 <body>
   <header class="page-header">
-    <div class="header-content">
+    <div class="header-top">
         <a href="index.html" class="header-logo">
-            <img src="images/horse-logo.jpg" alt="running white horse" class="header-logo"/>
+            <img src="images/horse-logo.jpg" alt="logo: running white horse" class="header-logo"/>
         </a>
         <h1 class="site-title">Horse World</h1>
-        <span class="material-symbols-outlined menu-icon" aria-label="Menu" tabindex="0">menu</span>
     </div>
 
     <nav class="main-nav">
-        <div class="nav-section">
-            <h2 class="nav-title">Menu</h2>
-            <ul class="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="register.html">Registration</a></li>
-            </ul>
-        </div>
-
-        <div class="nav-section">
-            <h2 class="nav-title">External Links</h2>
-            <ul class="external-links">
-                <li><a href="https://en.wikipedia.org/wiki/Horse">Wikipedia</a></li>
-                <li><a href="https://www.nationalgeographic.com/animals/mammals/facts/horse">National Geographic</a></li>
-                <li><a href="https://www.blm.gov/whb">Wild Horse and Burro Program</a></li>
-            </ul>
-        </div>
+        <ul class="nav-menu">
+            <li class="dropdown">
+                <span>Menu</span>
+                <ul class="dropdown-content">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="register.html">Registration</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <span>External Links</span>
+                 <ul class="dropdown-content">
+                    <li><a href="https://en.wikipedia.org/wiki/Horse">Wikipedia</a></li>
+                    <li><a href="https://www.nationalgeographic.com/animals/mammals/facts/horse">National Geographic</a></li>
+                    <li><a href="https://www.blm.gov/whb">Wild Horse and Burro Program</a></li>
+                 </ul>
+            </li>
+        </ul>
     </nav>
   </header>
 
     <main class="page-content">
-        <h3>Common Horse Breeds</h3>
-        <section class="cards-grid">
+        <div class="container">
 
-            <article class="card">
-                <img src="images/Arabian%20Horse.jpg" alt="Arabian Horse face" class="card-image"/>
-                <div class="card-content">
-                    <h4 class="card-title">Arabian Horse</h4>
-                    <p>The Arabian horse is one of the oldest and most recognizable horse breeds in the world. </p>
-                    <a href="https://en.wikipedia.org/wiki/Arabian_horse" class="read-more">Read More</a>
-                </div>
-            </article>
+            <section class="breed-section">
+                <h2>Common Horse Breeds</h2>
+                <div class="breed-cards">
 
-            <article class="card">
-                <img src="images/american-quarter-horse.jpg" alt="running American Quarter Horse" class="card-image"/>
-                <div class="card-content">
-                    <h4 class="card-title">American Quarter Horse</h4>
-                    <p>Most popular in the U.S.—around 42% of U.S. horses are Quarter Horses. </p>
-                    <a href="https://en.wikipedia.org/wiki/American_Quarter_Horse" class="read-more">Read More</a>
-                </div>
-            </article>
+                    <article class="card">
+                        <img src="images/Arabian%20Horse.jpg" alt="Arabian Horse face" class="card-image"/>
+                        <div class="card-content">
+                            <h3 class="card-title">Arabian Horse</h3>
+                            <p>The Arabian horse is one of the oldest and most recognizable horse breeds in the world. </p>
+                            <a href="https://en.wikipedia.org/wiki/Arabian_horse" class="read-more">Read More</a>
+                        </div>
+                    </article>
 
-            <article class="card">
-                <img src="images/thoroughbred.jpg" alt="Thoroughbred in meadow" class="card-image"/>
-                <div class="card-content">
-                    <h4 class="card-title">Thoroughbred</h4>
-                    <p>Thoroughbreds are used mainly for racing, but are also bred for other riding disciplines such as show jumping, combined training, dressage, polo, and fox hunting. </p>
-                    <a href="https://en.wikipedia.org/wiki/Thoroughbred" class="read-more">Read More</a>
-                </div>
-            </article>
+                    <article class="card">
+                        <img src="images/american-quarter-horse.jpg" alt="running American Quarter Horse" class="card-image"/>
+                        <div class="card-content">
+                            <h3 class="card-title">American Quarter Horse</h3>
+                            <p>Most popular in the U.S.—around 42% of U.S. horses are Quarter Horses. </p>
+                            <a href="https://en.wikipedia.org/wiki/American_Quarter_Horse" class="read-more">Read More</a>
+                        </div>
+                    </article>
 
-            <article class="card">
-                <img src="images/appaloosa.jpg" alt="Appaloosa with trees" class="card-image"/>
-                <div class="card-content">
-                    <h4 class="card-title">Appaloosa</h4>
-                    <p>The Appaloosa is an American horse breed best known for its colorful spotted coat pattern. </p>
-                    <a href="https://en.wikipedia.org/wiki/Appaloosa" class="read-more">Read More</a>
-                </div>
-            </article>
-        </section>
+                    <article class="card">
+                        <img src="images/thoroughbred.jpg" alt="Thoroughbred in meadow" class="card-image"/>
+                        <div class="card-content">
+                            <h3 class="card-title">Thoroughbred</h3>
+                            <p>Thoroughbreds are used mainly for racing, but are also bred for other riding disciplines such as show jumping, combined training, dressage, polo, and fox hunting. </p>
+                            <a href="https://en.wikipedia.org/wiki/Thoroughbred" class="read-more">Read More</a>
+                        </div>
+                    </article>
 
-        <h3>Famous Horses in History</h3>
-        <section class="cards-grid">
-            <article class="card">
-                <img src="images/bucephalus.jpg" alt="statue of Bucephalus" class="card-image"/>
-                <div class="card-content">
-                    <h4 class="card-title">Bucephalus</h4>
-                    <p>Warhorse of Alexander the Great; notably untameable until Alexander calmed him by turning him toward the sun. </p>
-                    <a href="https://en.wikipedia.org/wiki/Bucephalus" class="read-more">More about Bucephalus</a>
+                    <article class="card">
+                        <img src="images/appaloosa.jpg" alt="Appaloosa with trees" class="card-image"/>
+                        <div class="card-content">
+                            <h3 class="card-title">Appaloosa</h3>
+                            <p>The Appaloosa is an American horse breed best known for its colorful spotted coat pattern. </p>
+                            <a href="https://en.wikipedia.org/wiki/Appaloosa" class="read-more">Read More</a>
+                        </div>
+                    </article>
                 </div>
-            </article>
+            </section>
 
-            <article class="card">
-                <img src="images/seabiscuit.jpg" alt="running Seabiscuit" class="card-image"/>
-                <div class="card-content">
-                    <h4 class="card-title">Seabiscuit</h4>
-                    <p>Underestimated early in his career, rose to fame during the Great Depression as an inspiring racing champion.</p>
-                    <a href="https://en.wikipedia.org/wiki/Seabiscuit" class="read-more">More about Seabiscuit</a>
-                </div>
-            </article>
+            <section class="history-section">
+                <h2>Famous Horses in History</h2>
+                <div class="history-cards">
+                    <article class="card">
+                        <img src="images/bucephalus.jpg" alt="statue of Bucephalus" class="card-image"/>
+                        <div class="card-content">
+                            <h3 class="card-title">Bucephalus</h3>
+                            <p>Warhorse of Alexander the Great; notably untameable until Alexander calmed him by turning him toward the sun. </p>
+                            <a href="https://en.wikipedia.org/wiki/Bucephalus" class="read-more">More about Bucephalus</a>
+                        </div>
+                    </article>
 
-            <article class="card">
-                <img src="images/man-o-war.jpg" alt="face of Man o’ War" class="card-image"/>
-                <div class="card-content">
-                    <h4 class="card-title">Man o’ War</h4>
-                    <p>Considered among the greatest American racehorses ever. Won 20 of 21 races in 1919–1920.</p>
-                    <a href="https://en.wikipedia.org/wiki/Man_o%27_War" class="read-more">More about Man o’ War</a>
-                </div>
-            </article>
+                    <article class="card">
+                        <img src="images/seabiscuit.jpg" alt="running Seabiscuit" class="card-image"/>
+                        <div class="card-content">
+                            <h3 class="card-title">Seabiscuit</h3>
+                            <p>Underestimated early in his career, rose to fame during the Great Depression as an inspiring racing champion.</p>
+                            <a href="https://en.wikipedia.org/wiki/Seabiscuit" class="read-more">More about Seabiscuit</a>
+                        </div>
+                    </article>
 
-            <article class="card">
-                <img src="images/secretariat.jpg" alt="face of Secretariat" class="card-image"/>
-                <div class="card-content">
-                    <h4 class="card-title">Secretariat</h4>
-                    <p>Achieved the Triple Crown in 1973, setting records in all three races, including a 31-length Belmont Stakes win.</p>
-                    <a href="https://en.wikipedia.org/wiki/Secretariat_(horse)" class="read-more">More about Secretariat</a>
+                    <article class="card">
+                        <img src="images/man-o-war.jpg" alt="face of Man o’ War" class="card-image"/>
+                        <div class="card-content">
+                            <h3 class="card-title">Man o’ War</h3>
+                            <p>Considered among the greatest American racehorses ever. Won 20 of 21 races in 1919–1920.</p>
+                            <a href="https://en.wikipedia.org/wiki/Man_o%27_War" class="read-more">More about Man o’ War</a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <img src="images/secretariat.jpg" alt="face of Secretariat" class="card-image"/>
+                        <div class="card-content">
+                            <h3 class="card-title">Secretariat</h3>
+                            <p>Achieved the Triple Crown in 1973, setting records in all three races, including a 31-length Belmont Stakes win.</p>
+                            <a href="https://en.wikipedia.org/wiki/Secretariat_(horse)" class="read-more">More about Secretariat</a>
+                        </div>
+                    </article>
                 </div>
-            </article>
-        </section>
+            </section>
+        </div>
     </main>
 
     <footer class="page-footer">

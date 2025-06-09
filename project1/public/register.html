@@ -10,37 +10,37 @@
 
 <body>
   <header class="page-header">
-    <div class="header-content">
+    <div class="header-top">
         <a href="index.html" class="header-logo">
-            <img src="images/horse-logo.jpg" alt="running white horse" class="header-logo"/>
+            <img src="images/horse-logo.jpg" alt="logo: running white horse" class="header-logo"/>
         </a>
         <h1 class="site-title">Horse World</h1>
-        <span class="material-symbols-outlined menu-icon" aria-label="Menu" tabindex="0">menu</span>
     </div>
 
     <nav class="main-nav">
-        <div class="nav-section">
-            <h2 class="nav-title">Menu</h2>
-            <ul class="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="register.html">Registration</a></li>
-            </ul>
-        </div>
-
-        <div class="nav-section">
-            <h2 class="nav-title">External Links</h2>
-            <ul class="external-links">
-                <li><a href="https://en.wikipedia.org/wiki/Horse">Wikipedia</a></li>
-                <li><a href="https://www.nationalgeographic.com/animals/mammals/facts/horse">National Geographic</a></li>
-                <li><a href="https://www.blm.gov/whb">Wild Horse and Burro Program</a></li>
-            </ul>
-        </div>
+        <ul class="nav-menu">
+            <li class="dropdown">
+                <span>Menu</span>
+                <ul class="dropdown-content">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="register.html">Registration</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <span>External Links</span>
+                 <ul class="dropdown-content">
+                    <li><a href="https://en.wikipedia.org/wiki/Horse">Wikipedia</a></li>
+                    <li><a href="https://www.nationalgeographic.com/animals/mammals/facts/horse">National Geographic</a></li>
+                    <li><a href="https://www.blm.gov/whb">Wild Horse and Burro Program</a></li>
+                 </ul>
+            </li>
+        </ul>
     </nav>
   </header>
 
     <main class="site-content">
-        <h3 class="page-title">Register for Updates</h3>
+        <h2 class="page-title">Register for Updates</h2>
         <form action="/submit" method="post" class="registration-form">
             <fieldset>
                 <legend>Personal Information</legend>
