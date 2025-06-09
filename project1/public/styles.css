@@ -407,6 +407,14 @@ legend {
         padding: 2rem 1rem;
     }
 
+    .page-content {
+        padding-top: 2rem;
+    }
+
+    .page-title {
+        margin-bottom: 2rem;
+    }
+
     .site-title {
         font-size: 4rem;
         text-align: center;
@@ -465,6 +473,10 @@ legend {
   /* Card Layout */
     .history-cards .card {
         grid-column: span 3;
+    }
+
+    .breed-cards .card {
+        grid-column: span 4;
     }
 
   .footer-nav {
