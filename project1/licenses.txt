@@ -1,45 +1,47 @@
 Images from Unsplash:
 
-1. File:
+1. Image: horse-logo.jpg
+   File: images/horse-logo.jpg
    URL: https://unsplash.com/photos/running-white-horse-lIeqGEdvex0
    License: https://unsplash.com/license
 
-2. File: Arabian Horse
+2. Image: Arabian Horse.jpg
+    File: images/Arabian Horse.jpg
     URL: https://unsplash.com/photos/a-black-and-white-photo-of-a-horses-head-b-0DngoJjtE
-    License:
+    License: https://unsplash.com/license
 
-3. File: American Quarter Horse
+3. Image: american-quarter-horse.jpg
+    File: images/american-quarter-horse.jpg
     URL: https://unsplash.com/photos/a-horse-running-in-a-field-ZDSiVbYJJao
-    License:
+    License: https://unsplash.com/license
 
-4. File: Thoroughbred
+4. Image: thoroughbred.jpg
+    File: images/thoroughbred.jpg
     URL: https://unsplash.com/photos/a-horse-gallops-forward-in-a-green-meadow-9DxbFiVutaI
-    License:
+    License: https://unsplash.com/license
 
-5. File: Appaloosa
+5. Image: appaloosa.jpg
+    File: images/appaloosa.jpg
     URL: https://unsplash.com/photos/a-horse-standing-in-a-field-with-trees-in-the-background-3rgMjCPa1Qg
     License:
 
-6. File: Bucephalus
+6. Image: bucephalus.jpg
+    File: images/bucephalus.jpg
     URL: https://unsplash.com/photos/a-statue-of-a-hero-slaying-a-dragon-mojI3y1KKlI
-    License:
+    License: https://unsplash.com/license
 
-7. File: Seabiscuit
+7. Image: seabiscuit.jpg
+    File: images/seabiscuit.jpg
     URL: https://unsplash.com/photos/a-horse-running-in-a-field-with-trees-in-the-background-Ge91tsRHKSk
-    License:
+    License: https://unsplash.com/license
 
-8. File: Man o’ War
+8. Image: man-o-war.jpg
+    File: images/man-o-war.jpg
     URL: https://unsplash.com/photos/photo-of-brown-horse-during-day-time-OLL7SNhGeZk
-    License:
+    License: https://unsplash.com/license
 
-9. File: Secretariat
+9. Image: secretariat.jpg
+    File: images/secretariat.jpg
     URL: https://unsplash.com/photos/shallow-focus-photography-of-brown-horse-MWZSDcu4Xb0
-    License:
+    License: https://unsplash.com/license
 
-10. File:
-    URL:
-    License:
-
-11. File:
-    URL:
-    License:
