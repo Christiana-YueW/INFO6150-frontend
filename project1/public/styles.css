@@ -1,0 +1,495 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    font-family: Raleway, sans-serif;
+    line-height: 1.6;
+
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* 12-column grid system */
+.container {
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 0 0.9375rem;
+}
+
+.breed-cards, .history-cards {
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    gap:1rem;
+    margin-bottom: 2rem;
+}
+
+.col-1 {
+    grid-column: span 1;
+}
+.col-2 {
+    grid-column: span 2;
+}
+.col-3 {
+    grid-column: span 3;
+}
+.col-4 {
+    grid-column: span 4;
+}
+.col-6 {
+    grid-column: span 6;
+}
+.col-8 {
+    grid-column: span 8;
+}
+.col-12 {
+    grid-column: span 12;
+}
+
+/* Main Layout */
+.main-content {
+    flex: 1;
+}
+
+.site-content {
+    flex: 1;
+}
+
+/* Header */
+.page-header {
+    position: relative;
+    z-index: 100;
+
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 0.125rem solid #ccc;
+
+    background-color: #fff;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    background: linear-gradient(135deg, #eaeaea 0%, #f5f5f5 100%);
+    padding: 1.5rem 1rem;
+
+    border-top-left-radius: 0.625rem;
+    border-top-right-radius: 0.625rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.1);
+}
+
+.header-logo img {
+    height: 10rem;
+    width: auto;
+    border-radius: 0.375rem;
+    box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.2);
+    border: 0.125rem solid #ddd;
+}
+
+.site-title {
+    font-size: 3rem;
+    text-align: center;
+    color: #111;
+    margin: 0.5rem 1rem;
+    padding: 0.5rem;
+}
+
+.main-nav {
+    position: relative;
+    z-index: 200;
+
+    background-color: #eaeaea;
+    padding: 1rem;
+    border-bottom-left-radius: 0.625rem;
+    border-bottom-right-radius: 0.625rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.1);
+    margin-bottom: 0.1rem;
+}
+
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+
+    font-size: 1.375rem;
+}
+
+.nav-menu > li {
+    position: relative;
+    padding: 0.5rem;
+}
+
+.nav-menu > li:hover {
+    background-color: #e0e0e0;
+}
+
+.nav-menu > li > span {
+  cursor: pointer;
+  font-weight: bold;
+    font-size: 1.2rem;
+    display: block;
+    color: #111;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.dropdown-content {
+    display: none;
+    list-style: none;
+    padding: 0.2rem 1rem;
+    margin-top: 0.2rem;
+    border-left: 0.125rem solid #aaa;
+}
+
+.dropdown-content li {
+    padding: 0;
+}
+
+.dropdown-content a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+}
+
+.dropdown-content a:hover, .dropdown-content a:focus {
+    text-decoration: underline;
+    color: #000;
+    font-weight: 600;
+}
+
+.dropdown:hover .dropdown-content, .dropdown:focus-within .dropdown-content {
+    display: block;
+}
+
+/* Main Page Content */
+.main-content, .page-content {
+    padding: 1rem;
+}
+
+.page-content h2, .main-content h2, .about-title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    padding: 0.5rem;
+    border-bottom: 0.15rem solid #ddd;
+}
+
+.page-content h2:nth-of-type(2) {
+    margin-top: 3rem;
+}
+
+/* Card Design */
+.breed-cards .card {
+    grid-column: span 6;
+}
+
+.history-cards .card {
+    grid-column: span 6;
+}
+
+.card {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+
+    border: 0.0625rem solid #e0e0e0;
+    margin: 0.1rem;
+    padding: 0;
+
+    background: linear-gradient(135deg, white 0%, #fafafa 100%);
+}
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-image {
+    width: 100%;
+    height: auto;
+    border-bottom: 0.0625rem solid #e0e0e0;
+}
+
+.card-content {
+    padding: 0.6rem 1rem;
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+
+    border-bottom: 0.0625rem solid #f0f0f0; /* Subtle separator */
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 0.5rem;
+    text-decoration: none;
+
+    color: #0066cc;
+}
+
+.read-more:hover, .read-more:focus {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Footer */
+.page-footer {
+    margin-top: 0.6rem;
+    border-top: 0.0625rem solid #ccc;
+    padding: 1.2rem;
+    text-align: center;
+
+    background: linear-gradient(135deg, #f8f8f8 0%, #eaeaea 100%);
+}
+
+.footer-nav a {
+    margin: 0 1rem;
+    color: #333;
+    text-decoration: none;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.footer-nav a:hover, .footer-nav a:focus {
+    text-decoration: underline;
+    font-weight: bold;
+    background-color: #e8e8e8;
+}
+
+/* About Content */
+.main-content p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    padding: 0 1.8rem; /* Side padding for better reading */
+}
+
+/* Register Form */
+main.site-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2rem 1rem;
+
+}
+
+.page-title {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 1.6rem;
+    margin-top: 0;
+    color: #333;
+}
+
+.main-content h2 {
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 2.5rem;
+}
+
+.registration-form {
+    width: 100%;
+    max-width: 37.5rem;
+
+    padding: 1em;
+    border-radius: 0.375rem;
+    box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+fieldset {
+    margin-bottom: 2rem;
+    border:0.0625rem solid #cccccc;
+    padding: 1.5em;
+    background-color: #fff;
+}
+
+legend {
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-size: 1.35rem;
+    padding: 0 0.3rem;
+}
+
+.field-container {
+    margin-bottom: 1.2em;
+}
+
+.form-label, .label-name, .label-email, .label-tier {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.3em;
+
+    font-size: 1.1rem;
+}
+
+.required {
+    font-weight: normal;
+    font-size: 0.8rem;
+    color: #d32f2f;
+}
+
+.form-input, .form-select {
+    width: 100%;
+    padding: 0.2em 0.5em;
+
+    border: 0.0625rem solid #ccc;
+    font-size: 1rem;
+}
+
+.form-input:focus, .form-select:focus {
+    outline: 0.1rem solid #0066cc;
+    border-color: #0066cc;
+}
+
+.field-container input[type="checkbox"] {
+    margin-right: 0.5em;
+    vertical-align: middle;
+}
+
+.label-checkbox {
+    display: inline;
+    font-weight: normal;
+    font-size: 0.9rem;
+    vertical-align: middle;
+}
+
+.button-submit {
+    background-color: #333;
+    color: #fff;
+    font-size: 0.9rem;
+
+    padding: 0.6em 1.2em;
+
+    border: none;
+    border-radius: 0.3125rem;
+    cursor: pointer;
+
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.2);
+}
+
+.button-submit:hover, .button-submit:focus {
+    background-color: #555;
+    transform: translateY(-0.125rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+}
+
+.field-container:last-child {
+    display: flex;
+    justify-content: center;
+}
+
+/* Desktop View  */
+@media (min-width: 43.75rem) {
+    .header-top {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 1.2rem;
+        padding: 2rem 1rem;
+    }
+
+    .page-content {
+        padding-top: 2rem;
+    }
+
+    .page-title {
+        margin-bottom: 2rem;
+    }
+
+    .site-title {
+        font-size: 4rem;
+        text-align: center;
+    }
+
+    .nav-menu {
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 8rem;
+    }
+
+    .dropdown {
+        position: relative;
+    }
+
+    .dropdown-content {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 999;
+
+        background-color: #f9f9f9;
+        border: 0.0625rem solid #ccc;
+        box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+        display: none;
+        padding: 0.5rem 1rem;
+        min-width: 10rem;
+
+        margin: 0;
+        list-style: none;
+    }
+
+    .dropdown:hover .dropdown-content, .dropdown:focus-within .dropdown-content {
+        display: block;
+    }
+
+    .dropdown span {
+        cursor: pointer;
+        font-weight: bold;
+        padding: 0.2rem 0.5rem;
+        display: block;
+        background-color: transparent;
+        transition: background-color 0.3s ease;
+    }
+
+  .dropdown-content a {
+    display: block;
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #f0f0f0;
+  }
+
+  /* Card Layout */
+    .history-cards .card {
+        grid-column: span 3;
+    }
+
+    .breed-cards .card {
+        grid-column: span 4;
+    }
+
+  .footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 1rem;
+  }
+
+}

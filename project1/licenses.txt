@@ -1,0 +1,47 @@
+Images from Unsplash:
+
+1. Image: horse-logo.jpg
+   File Name: images/horse-logo.jpg
+   URL: https://unsplash.com/photos/running-white-horse-lIeqGEdvex0
+   License: https://unsplash.com/license
+
+2. Image: Arabian Horse.jpg
+    File Name: images/Arabian Horse.jpg
+    URL: https://unsplash.com/photos/a-black-and-white-photo-of-a-horses-head-b-0DngoJjtE
+    License: https://unsplash.com/license
+
+3. Image: american-quarter-horse.jpg
+    File Name: images/american-quarter-horse.jpg
+    URL: https://unsplash.com/photos/a-horse-running-in-a-field-ZDSiVbYJJao
+    License: https://unsplash.com/license
+
+4. Image: thoroughbred.jpg
+    File Name: images/thoroughbred.jpg
+    URL: https://unsplash.com/photos/a-horse-gallops-forward-in-a-green-meadow-9DxbFiVutaI
+    License: https://unsplash.com/license
+
+5. Image: appaloosa.jpg
+    File Name: images/appaloosa.jpg
+    URL: https://unsplash.com/photos/a-horse-standing-in-a-field-with-trees-in-the-background-3rgMjCPa1Qg
+    License: https://unsplash.com/license
+
+6. Image: bucephalus.jpg
+    File Name: images/bucephalus.jpg
+    URL: https://unsplash.com/photos/a-statue-of-a-hero-slaying-a-dragon-mojI3y1KKlI
+    License: https://unsplash.com/license
+
+7. Image: seabiscuit.jpg
+    File Name: images/seabiscuit.jpg
+    URL: https://unsplash.com/photos/a-horse-running-in-a-field-with-trees-in-the-background-Ge91tsRHKSk
+    License: https://unsplash.com/license
+
+8. Image: man-o-war.jpg
+    File Name: images/man-o-war.jpg
+    URL: https://unsplash.com/photos/photo-of-brown-horse-during-day-time-OLL7SNhGeZk
+    License: https://unsplash.com/license
+
+9. Image: secretariat.jpg
+    File Name: images/secretariat.jpg
+    URL: https://unsplash.com/photos/shallow-focus-photography-of-brown-horse-MWZSDcu4Xb0
+    License: https://unsplash.com/license
+
