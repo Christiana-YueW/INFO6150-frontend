@@ -53,6 +53,8 @@ body {
     grid-template-columns: 1fr;
 
     gap: 1rem;
+
+    background-color: #f9f9f9;
 }
 
 fieldset {
