@@ -168,3 +168,33 @@ select {
     color: #c00;
     font-size: 0.8rem;
 }
+
+@media (min-width: 400px) {
+    .form-group {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .form-group label {
+        margin-bottom: 0;
+    }
+
+    .form-group .input,
+    .form-group select,
+    .form-group .error-message {
+    grid-column: 2;
+    }
+
+    .button-group {
+        grid-column: 1 / -1;
+        justify-content: center;
+    }
+
+
+    .form-group input[type="checkbox"] {
+        grid-column: 2;
+        justify-self: start;
+    }
+}

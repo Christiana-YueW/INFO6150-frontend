@@ -24,7 +24,7 @@
     })
 
     confirmInput.addEventListener("input", (e) => {
-        if (confirmInput.value !== emailInput.value) {
+        if (confirmInput.value && confirmInput.value !== emailInput.value) {
             confirmError.innerText = "Emails do not match";
         } else {
             confirmError.innerText = "";
