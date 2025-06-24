@@ -34,23 +34,17 @@
         if (nameInput.value.trim() === "") {
             nameError.innerText = "Name is required";
             hasError = true;
-        } else {
-            nameError.innerText = "";
         }
 
         if (emailInput.value.trim() === "") {
             emailError.innerText = "Email is required";
             hasError = true;
-        } else {
-            emailError.innerText = "";
         }
 
 
         if (confirmInput.value.trim() !== emailInput.value.trim()) {
             confirmError.innerText = "Emails do not match";
             hasError = true;
-        } else {
-            confirmError.innerText = "";
         }
 
         if (tierInput.value === "") {
