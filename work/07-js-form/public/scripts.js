@@ -23,6 +23,14 @@
         }
     })
 
+    confirmInput.addEventListener("input", (e) => {
+        if (confirmInput.value !== emailInput.value) {
+            confirmError.innerText = "Emails do not match";
+        } else {
+            confirmError.innerText = "";
+        }
+    })
+
     form.addEventListener("submit", (e) => {
         let hasError = false;
 
@@ -34,20 +42,26 @@
         if (nameInput.value.trim() === "") {
             nameError.innerText = "Name is required";
             hasError = true;
+        } else {
+            emailError.innerText = "";
         }
 
         if (emailInput.value.trim() === "") {
             emailError.innerText = "Email is required";
             hasError = true;
+        } else {
+            emailError.innerText = "";
         }
 
 
         if (confirmInput.value.trim() !== emailInput.value.trim()) {
             confirmError.innerText = "Emails do not match";
             hasError = true;
+        } else {
+            confirmError.innerText = "";
         }
 
-        if (tierInput.value.trim() === "") {
+        if (tierInput.value === "") {
             tierError.innerText = "Please select a tier.";
             hasError = true;
         }
