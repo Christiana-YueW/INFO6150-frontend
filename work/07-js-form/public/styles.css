@@ -55,6 +55,17 @@ body {
     gap: 1rem;
 }
 
+fieldset {
+    border:1px solid #cccccc;
+    padding: 1.5em;
+}
+
+legend {
+    font-weight: bold;
+    margin-bottom: 0.2rem;
+    font-size: 1.3rem;
+}
+
 .form-group {
     display: flex;
     flex-direction: column;
@@ -66,8 +77,6 @@ body {
 label {
     font-weight: bold;
     font-size: 1rem;
-
-    margin-top: 1rem;
 }
 
 .required-text {
