@@ -23,14 +23,6 @@
         }
     })
 
-    confirmInput.addEventListener("input", (e) => {
-        if (confirmInput.value && confirmInput.value !== emailInput.value) {
-            confirmError.innerText = "Emails do not match";
-        } else {
-            confirmError.innerText = "";
-        }
-    })
-
     form.addEventListener("submit", (e) => {
         let hasError = false;
 
@@ -43,7 +35,7 @@
             nameError.innerText = "Name is required";
             hasError = true;
         } else {
-            emailError.innerText = "";
+            nameError.innerText = "";
         }
 
         if (emailInput.value.trim() === "") {
