@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>App User Registration</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="scripts.js"></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <h1 class="site-title">New User Registration</h1>
+    </header>
+
+    <main class="site-content">
+        <form action="/register" method="post" class="register-form" novalidate>
+            <fieldset>
+                <legend>Personal Information</legend>
+
+                <div class="form-group">
+                    <label for="name">Name: <span class="required-text">*</span></label>
+                    <input type="text" name="name" id="name" class="input input--name" />
+                    <div class="error-message" id="name-error"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email: <span class="required-text">*</span></label>
+                    <input type="text" name="email" id="email" class="input input--email" />
+                    <div class="error-message" id="email-error"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm">Confirm Email: <span class="required-text">*</span></label>
+                    <input type="text" name="confirm" id="confirm" class="input input--confirm" />
+                    <div class="error-message" id="confirm-error"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="wants-spam">
+                        <input type="checkbox" name="wants-spam" id="wants-spam"/> Do you want us to send you emails?
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label for="tier">Subscription Tier: <span class="required-text">*</span></label>
+                    <select id="tier" name="tier" >
+                        <option value="" selected>Please select</option>
+                        <option value="1">Silver Tier</option>
+                        <option value="2">Gold Tier</option>
+                        <option value="3">Platinum Tier</option>
+                    </select>
+                    <div class="error-message" id="tier-error"></div>
+                </div>
+
+                <div class="form-group button-group">
+                    <button type="submit" class="button">Register</button>
+                </div>
+            </fieldset>
+        </form>
+    </main>
+
+    <footer class="site-footer">
+        <nav class="footer-nav">
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+</body>
+</html>
