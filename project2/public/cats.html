@@ -28,8 +28,8 @@
 
           <nav id="main-nav" class="main-nav" role="navigation">
               <ul class="nav-list">
-                  <li><a href="index.html" aria-current="page">Home</a></li>
-                  <li><a href="cats.html">Famous Cats</a></li>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="cats.html" aria-current="page">Famous Cats</a></li>
                   <li><a href="events.html">Cat Events</a></li>
               </ul>
           </nav>
@@ -99,15 +99,15 @@
   </main>
 
     <dialog id="subscribe-modal" class="modal">
-        <form method="dialog" class="subscription-form">
+        <form method="post" action="/subscribe" class="subscription-form">
             <h3>Subscribe to the Latest Mews!</h3>
 
             <label for="email">Email <span aria-hidden="true">* required </span>
-                <input type="text" name="email" id="email" aria-required="true" required />
+                <input type="text" name="email" id="email" aria-required="true" />
             </label>
 
             <label for="confirm">Confirm Email <span aria-hidden="true">* required </span>
-                <input type="text" name="confirm" id="confirm" aria-required="true" required />
+                <input type="text" name="confirm" id="confirm" aria-required="true" />
             </label>
 
             <div class="form-buttons">
