@@ -117,17 +117,16 @@ body {
 .nav-list a:hover {
     background-color: #0056b3;
     color: white;
-    font-weight: bold;
 }
 
 .nav-list a:focus {
     background-color: #0056b3;
     color: white;
-    font-weight: bold;
 }
 
 .nav-list a[aria-current='page'] {
   font-weight: bold;
+    color: rosybrown;
 }
 
 /* main page panels */
@@ -331,6 +330,11 @@ body {
     border-radius: 0.25rem;
 }
 
+.button-subscribe:focus, .button-cancel:focus {
+    outline: 2px solid black;
+    outline-offset: 2px;
+}
+
 /* Footer */
 .site-footer {
     background-color: burlywood;
@@ -349,6 +353,12 @@ body {
     justify-content: space-around;
 
     gap: 1rem;
+}
+
+.error-message {
+    color: #c00;
+    font-size: 0.9rem;
+    min-height: 1.2rem;
 }
 
 
