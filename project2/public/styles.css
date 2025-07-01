@@ -40,7 +40,7 @@ body {
     background-color: burlywood;
 
     border-bottom: 1px solid #ccc;
-    padding: 1rem;
+    padding: 0.5rem;
 
     position: relative;
 
@@ -50,31 +50,39 @@ body {
 }
 
 .header-content {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
 
     align-items: center;
-    position: relative;
 
     width: 100%;
+    position: relative;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .site-title {
+    grid-column: 2;
+    text-align: center;
     font-size: 2.5rem;
     font-weight: bold;
-
-    margin-top: 1rem;
 }
 
 .logo {
     height: 100px;
     width: 100px;
+    display: block;
 }
 
 .logo-link {
-    position: absolute;
-    left: 0;
-    top: 0;
+    grid-column: 1;
+    justify-self: start;
+
+    padding: 0;
 }
 
 .menu-button {
@@ -360,5 +368,4 @@ body {
     font-size: 0.9rem;
     min-height: 1.2rem;
 }
-
 
