@@ -47,14 +47,14 @@
             isValid = false;
         }
 
-        if (confirm === "") {
-            confirmError.innerText = "This field is required";
+        if (email !== "" && email.includes("@")) {
+         if (confirm === "") {
+            confirmError.innerText = "This field is required.";
             isValid = false;
-        }
-
-        else if (email !== confirm) {
-            confirmError.innerText = "This field must match the provided email address";
+            } else if (email !== confirm) {
+            confirmError.innerText = "This field must match the provided email address.";
             isValid = false;
+            }
         }
 
         if (!isValid) {
