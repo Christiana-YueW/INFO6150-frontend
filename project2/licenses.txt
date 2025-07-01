@@ -1,46 +1,46 @@
 Images from Unsplash:
 
-1. Image:site-logo-cat.jpg
+1. Image: Brown Tabby Cat (Site Logo)
    File Name: images/site-logo-cat.jpg
    URL: https://unsplash.com/photos/brown-tabby-cat-7GX5aICb5i4
    License: https://unsplash.com/license
 
-2. Image:
+2. Image: White and Gray Kitten with Big Eyes
    File Name: images/kitten-bigeyes.jpg
    URL: https://unsplash.com/photos/white-and-gray-kitten-on-white-textile-so5nsYDOdxw
    License: https://unsplash.com/license
 
-3. Image:
+3. Image: Sleepy Orange Tabby Cat
    File Name: images/sleepy-orange-cat.jpg
    URL: https://unsplash.com/photos/orange-tabby-cat-on-brown-parquet-floor-LEpfefQf4rU
    License: https://unsplash.com/license
 
-4. Image:
+4. Image: Black and White Tuxedo Cat
    File Name: images/black-white-cat.jpg
    URL: https://unsplash.com/photos/shallow-focus-photography-of-tuxedo-cat-o6RbK3y7mK4
    License: https://unsplash.com/license
 
-5. Image:
+5. Image: Long-haired Cat with Christmas Scarf
    File Name: images/longhair-scarf-cat.jpg
    URL: https://unsplash.com/photos/white-and-brown-long-fur-cat-with-green-and-red-rose-on-head-hxEAE88Onv0
    License: https://unsplash.com/license
 
-6. Image:
+6. Image: Gray Cat Looking Down
    File Name: images/lookdown-cat.jpg
    URL: https://unsplash.com/photos/selective-focus-photography-of-gray-cat-beside-wall-MEb2jandkbc
    License: https://unsplash.com/license
 
-7. Image:
+7. Image: Orange Cat with Books
    File Name: images/cat-books.jpg
    URL: https://unsplash.com/photos/orange-tabby-cat-near-books-selective-focus-photography-VvO8e8n0Ffg
    License: https://unsplash.com/license
 
-8. Image:
+8. Image: Three Kittens Group Photo
    File Name: images/kittens-group.jpg
    URL: https://unsplash.com/photos/three-assorted-color-kittens-rplhB9mYF48
    License: https://unsplash.com/license
 
-9. Image:
+9. Image: Four Kittens in Basket
    File Name: images/cats-in-basket.jpg
    URL: https://unsplash.com/photos/four-assorted-color-tabby-kittens-on-brown-basket-YCPkW_r_6uA
    License: https://unsplash.com/license

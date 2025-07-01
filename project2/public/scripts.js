@@ -14,9 +14,49 @@
     const emailError = document.getElementById("email-error");
     const confirmError = document.getElementById("confirm-error");
 
+    const menuButton = document.querySelector(".menu-button");
+    const mainNav = document.querySelector(".main-nav");
+
+    if (menuButton && mainNav) {
+        menuButton.addEventListener("click", (e) => {
+            e.preventDefault();
+
+            const isExpanded = menuButton.getAttribute("aria-expanded") === "true";
+
+            menuButton.setAttribute("aria-expanded", !isExpanded);
+
+            if (isExpanded) {
+                mainNav.classList.remove("show");
+            } else {
+                mainNav.classList.add("show");
+            }
+        })
+
+        const navigationLinks = mainNav.querySelectorAll('a');
+        navigationLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                const mobileBreakpoint = 704; // 44rem in pixels
+                if (window.innerWidth < mobileBreakpoint && mainNav.classList.contains('show')) {
+                    mainNav.classList.remove('show');
+                    menuButton.setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
+
+        window.addEventListener('resize', function() {
+            const mobileBreakpoint = 704; // 44rem in pixels
+            if (window.innerWidth >= mobileBreakpoint) {
+                mainNav.classList.remove('show');
+                menuButton.setAttribute('aria-expanded', 'false');
+            }
+        });
+
+    }
+
     subscribeButton.forEach((button) => {
         button.addEventListener("click", function () {
             modal.showModal();
+            emailInput.focus();
         })
     })
 
@@ -43,7 +83,7 @@
         }
 
         else if (!email.includes("@")) {
-            emailError.innerText = "This field be a valid email address including a @";
+            emailError.innerText = "This field must be a valid email address including a @";
             isValid = false;
         }
 
@@ -60,5 +100,11 @@
         if (!isValid) {
             event.preventDefault();
         }
+    });
+        modal.addEventListener('cancel', function() {
+            emailInput.value = "";
+            confirmInput.value = "";
+            emailError.innerText = "";
+            confirmError.innerText = "";
     })
 })();

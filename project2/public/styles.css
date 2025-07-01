@@ -106,15 +106,15 @@ body {
     vertical-align: middle;
 }
 
-.main-nav {
+.site-header .main-nav {
     display: none;
     margin-top: 1.5rem;
     font-size: 1.25rem;
     width: 100%;
 }
 
-.main-nav.show {
-    display: block;
+.site-header .main-nav.show {
+    display: block !important;
 }
 
 .nav-list {
@@ -131,6 +131,11 @@ body {
 
 .nav-list li {
     text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+
+.nav-list li:last-child {
+    border-bottom: none;
 }
 
 .nav-list a {
@@ -175,8 +180,8 @@ body {
 }
 
 .panel-image {
-    width: 200px;
-    height: 200px;
+    width: 125px;
+    height: 125px;
     border-radius: 0.25rem;
 
     object-fit: cover;
@@ -414,8 +419,8 @@ body {
     }
 
 
-    .main-nav {
-        display: block;
+    .site-header .main-nav {
+        display: block !important;
         margin-top: 1.5rem;
     }
 
@@ -491,3 +496,5 @@ body {
         gap: 1rem;
     }
 }
+
+
