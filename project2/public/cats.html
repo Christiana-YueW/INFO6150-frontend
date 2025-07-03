@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Famous Internet Cats</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="scripts.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+</head>
+
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
+    <header class="site-header">
+        <div class="header-content">
+
+            <a href="index.html" class="logo-link">
+                <img class="logo" src="images/site-logo-cat.jpg" alt="Cats site logo" />
+            </a>
+
+            <div class="header-right">
+                <h1 class="site-title">Cats Power the Internet</h1>
+
+                <button id="menu-button" class="menu-button" aria-label="Toggle navigation menu" aria-expanded="false">
+                  <span class="material-symbols-outlined icon">menu</span>
+                </button>
+            </div>
+        </div>
+
+        <nav id="main-nav" class="main-nav" role="navigation" aria-label="Main navigation">
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cats.html" aria-current="page">Famous Cats</a></li>
+                <li><a href="events.html">Cat Events</a></li>
+            </ul>
+        </nav>
+    </header>
+
+  <main id="main-content" class="main-content" role="main">
+    <div class="container">
+
+      <section class="grid-section">
+
+          <article class="card">
+            <div class="card-content">
+              <h2 class="card-title">Nyx</h2>
+                <img src="images/black-white-cat.jpg" alt="black white cat face" class="card-image"/>
+                <p>With striking green eyes and a royal black-and-white coat, Nyx carries a quiet confidence — the kind only true internet royalty can pull off. </p>
+                <p>Love Nyx’s mysterious charm and royal stare? <button class="subscribe-link">Subscribe</button> to get more stories, photos, and feline updates straight to your inbox.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-content">
+              <h2 class="card-title">Pickle</h2>
+                <img src="images/cat-books.jpg" alt="orange cat with books" class="card-image"/>
+                <p>Pickle is the kind of cat who turns every corner into an adventure. Whether he's inspecting spiral notebooks or knocking pens off desks, his curiosity knows no bounds — and neither does his charm. </p>
+                <p>Want more moments like this? <button class="subscribe-link">Subscribe</button> to get more stories, photos, and feline updates straight to your inbox.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-content">
+              <h2 class="card-title">Mochi</h2>
+                <img src="images/kitten-bigeyes.jpg" alt="kitten with big eyes" class="card-image"/>
+                <p>With soft gray fluff, curious eyes, and the tiniest pink nose, Mochi is the definition of “too cute to handle.” Whether curled up or caught mid-pose like this, Mochi melts hearts in milliseconds. </p>
+                <p>Want more kittens like Mochi in your life? <button class="subscribe-link">Subscribe</button> to get more stories, photos, and feline updates straight to your inbox.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-content">
+              <h2 class="card-title">Snowball</h2>
+                <img src="images/longhair-scarf-cat.jpg" alt="cat with Christmas scarf" class="card-image"/>
+                <p>With cloud-soft fur and eyes full of wonder, Snowball brings winter magic to any room — especially dressed in her festive collar, complete with jingle poms. She doesn’t just pose for the camera — she owns it. </p>
+                <p>Can't get enough of glamorous cats like Snowball? <button class="subscribe-link">Subscribe</button> to get more stories, photos, and feline updates straight to your inbox.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-content">
+              <h2 class="card-title">Beans</h2>
+               <img src="images/lookdown-cat.jpg" alt="round face cat" class="card-image"/>
+                <p>Beans lives for the thrill — climbing furniture, ambushing shadows, and getting caught mid-mischief with wide, guilty eyes. Whether he’s about to pounce or pretend he didn’t knock something over, one thing's certain: the internet lives for cats like him. </p>
+                <p>Want more mischief and meme-worthy moments? <button class="subscribe-link">Subscribe</button> to get more stories, photos, and feline updates straight to your inbox.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-content">
+              <h2 class="card-title">Mimi</h2>
+                <img src="images/sleepy-orange-cat.jpg" alt="sleepy orange cat" class="card-image"/>
+                <p> Mimi isn’t just a cat — he’s a lifestyle. With closed eyes and calm posture, he reminds us all to slow down, breathe deeply, and maybe take a nap in a sunbeam. He radiates peace… unless the food bowl’s empty.</p>
+                <p>Craving more calm, cozy cat energy? <button class="subscribe-link">Subscribe</button> to get more stories, photos, and feline updates straight to your inbox.</p>
+            </div>
+          </article>
+
+      </section>
+    </div>
+  </main>
+
+    <dialog id="subscribe-modal" class="modal" aria-labelledby="modal-title">
+        <form method="post" action="/subscribe" class="subscription-form">
+            <h3 id="modal-title">Subscribe to the Latest Mews!</h3>
+
+            <label for="email">Email <span aria-hidden="true">* required </span>
+                <input type="text" name="email" id="email" aria-required="true" aria-describedby="email-error" />
+            </label>
+            <div class="error-message" id="email-error"></div>
+
+            <label for="confirm">Confirm Email <span aria-hidden="true">* required </span>
+                <input type="text" name="confirm" id="confirm" aria-required="true" aria-describedby="confirm-error" />
+            </label>
+            <div class="error-message" id="confirm-error" role="alert"></div>
+
+            <div class="form-buttons">
+                <button type="submit" class="button-subscribe" id="subscribe">Subscribe</button>
+                <button type="button" class="button-cancel" id="cancel">Cancel</button>
+            </div>
+        </form>
+    </dialog>
+
+    <footer class="site-footer">
+        <nav aria-label="Footer navigation">
+            <ul class="footer-nav">
+                <li><a href="/">Privacy Policy</a></li>
+                <li><a href="/">Work For Us</a></li>
+                <li><a href="/">Contact Us</a></li>
+                <li><a href="/">Social Media</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+</body>
+</html>
