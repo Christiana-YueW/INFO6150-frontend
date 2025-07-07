@@ -12,19 +12,15 @@ function App() {
     return (
 
         <main className="app-container">
-            <div className="inventory-section">
+
+            <div className="inventory-row">
 
                 <p className="inventory-label"> Inventory Count : {count} </p>
-
-                <div className="buttons">
-
-                    <button className="inventory-button" onClick={() => setCount(count + 1)}> + </button>
-                    <button className="inventory-button" onClick={() => setCount(count - 1)} disabled={!count}> - </button>
-
-                </div>
+                <button className="inventory-button" onClick={() => setCount(count + 1)}> + </button>
+                <button className="inventory-button" onClick={() => setCount(count - 1)} disabled={!count}> - </button>
+                {count === 0 && <Reorder onReorder={handleReorder} />}
 
             </div>
-            {count === 0 && <Reorder onReorder={handleReorder} />}
         </main>
     );
 }
