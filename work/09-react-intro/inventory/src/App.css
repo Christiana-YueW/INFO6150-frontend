@@ -34,9 +34,6 @@
 }
 
 .inventory-button:hover {
-  background-color: rosybrown;
-  color: white;
-
   transform: translateY(-0.125rem);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
 }
