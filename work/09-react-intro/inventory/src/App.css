@@ -1,0 +1,54 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 2rem;
+  padding: 2rem;
+
+  justify-content: space-between;
+}
+
+.inventory-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.inventory-label {
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.inventory-button {
+  background-color: rosybrown;
+  color: white;
+  border: none;
+  cursor: pointer;
+
+  padding: 1rem 2rem;
+
+  font-size: 1rem;
+
+  border-radius: 2rem;
+}
+
+.inventory-button:hover {
+  background-color: rosybrown;
+  color: white;
+
+  transform: translateY(-0.125rem);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+}
+
+.inventory-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
