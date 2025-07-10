@@ -1,0 +1,44 @@
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.inventory-row {
+  display: flex;
+  align-items: center;
+
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.inventory-label {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.inventory-button {
+  background-color: rosybrown;
+  color: white;
+  border: none;
+  cursor: pointer;
+
+  padding: 0.6rem 1.2rem;
+
+  font-size: 1rem;
+
+  border-radius: 2rem;
+}
+
+.inventory-button:hover {
+  transform: translateY(-0.125rem);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+}
+
+.inventory-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
