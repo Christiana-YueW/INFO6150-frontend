@@ -1,0 +1,21 @@
+.button {
+    border: none;
+    border-radius: 0.5rem;
+
+    padding: 1rem 2rem;
+
+    background-color: cornflowerblue;
+    color: white;
+
+    cursor: pointer;
+}
+
+.button-link {
+
+    background: none;
+    color: dodgerblue;
+
+    text-decoration: underline;
+    border: none;
+    cursor: pointer;
+}
