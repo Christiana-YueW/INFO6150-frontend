@@ -9,9 +9,9 @@ function Header({ setPage }) {
                 <h1> Purely Lemon </h1>
 
                 <nav>
-                    <button visual="link" onClick={() => setPage('Text')}>Text</button>
-                    <button visual="link" onClick={() => setPage('CardsPage')}>Cards</button>
-                    <button visual="link" onClick={() => setPage('PanelsPage')}>Panels</button>
+                    <Button visual="link" onClick={() => setPage('Text')}>Text</Button>
+                    <Button visual="link" onClick={() => setPage('CardsPage')}>Cards</Button>
+                    <Button visual="link" onClick={() => setPage('PanelsPage')}>Panels</Button>
                 </nav>
 
             </div>

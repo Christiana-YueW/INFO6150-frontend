@@ -38,6 +38,10 @@ function Modal({isOpen, onClose}) {
       const handleSubmit = (e) => {
         e.preventDefault();
         setSubmitted(true);
+
+        setTimeout(() => {
+          setInputValue("");
+        }, 100);
       };
 
     return (

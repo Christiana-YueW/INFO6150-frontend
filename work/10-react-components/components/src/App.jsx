@@ -12,13 +12,22 @@ import Button from "./Button";
 function App() {
     const [page, setPage] = useState('Text');
     const [modalOpen, setModalOpen] = useState(false);
+    const [contactClicked, setContactClicked] = useState(false);
+    const [demoClicked, setDemoClicked] = useState(false);
 
     const openModal = () => {
         setModalOpen(true);
+        setContactClicked(true);
+        setTimeout(() => setContactClicked(false), 3000);
     };
 
     const closeModal = () => {
         setModalOpen(false);
+    };
+
+    const handleDemoClick = () => {
+        setDemoClicked(true);
+        setTimeout(() => setDemoClicked(false), 2000);
     };
 
     return (
@@ -26,14 +35,35 @@ function App() {
             <Header setPage={setPage} />
 
             <main>
+
                 <div className="page-content">
                     {page === "Text" && <TextPage />}
                     {page === "CardsPage" && <CardsPage />}
                     {page === "PanelsPage" && <PanelsPage />}
 
-                    <Button type="button" visual="button" onClick={openModal}>
+                    <div className="button-group">
+
+                        <Button type="button" visual="button" onClick={openModal}>
                         Contact Us
-                    </Button>
+                        </Button>
+
+                        <Button type="button" visual="link" onClick={handleDemoClick}>
+                            Demo
+                        </Button>
+                    </div>
+
+                    {contactClicked &&  (
+                        <p className="feedback-message feedback-success">
+                            ✅ Contact modal opened!
+                        </p>
+                    )}
+
+                    {demoClicked && (
+                        <p className="feedback-message feedback-info">
+                            ✅ Demo button clicked! Thanks for trying it.
+                        </p>
+                    )}
+
 
                 </div>
             </main>
