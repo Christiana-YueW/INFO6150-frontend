@@ -1,3 +1,4 @@
+import './Card.css';
 
 
 function Card({ title, text, img, link, setPage }) {

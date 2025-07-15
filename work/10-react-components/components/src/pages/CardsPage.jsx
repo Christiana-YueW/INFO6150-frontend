@@ -1,5 +1,7 @@
 import cardData from '../data/cards';
 import Card from '../components/Card';
+import './CardsPage.css';
+
 
 function CardsPage({setPage}) {
     return (

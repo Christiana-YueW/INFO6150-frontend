@@ -1,46 +1,22 @@
 Images from Unsplash:
 
-1. Image: Brown Tabby Cat (Site Logo)
-   File Name: images/site-logo-cat.jpg
-   URL: https://unsplash.com/photos/brown-tabby-cat-7GX5aICb5i4
+1. Image: yellow lemon on the tree
+   File Name: src/images/lemontree.jpg
+   URL: https://unsplash.com/photos/bunch-of-yellow-lemon-Z-Y6I45f9kQ
    License: https://unsplash.com/license
 
-2. Image: White and Gray Kitten with Big Eyes
-   File Name: images/kitten-bigeyes.jpg
-   URL: https://unsplash.com/photos/white-and-gray-kitten-on-white-textile-so5nsYDOdxw
+2. Image: colorful lemon slices
+   File Name: src/images/lemonslices.jpg
+   URL: https://unsplash.com/photos/flat-lay-photography-of-sliced-pomegranate-lime-and-lemon-7r1HxvVC7AY
    License: https://unsplash.com/license
 
-3. Image: Sleepy Orange Tabby Cat
-   File Name: images/sleepy-orange-cat.jpg
-   URL: https://unsplash.com/photos/orange-tabby-cat-on-brown-parquet-floor-LEpfefQf4rU
+3. Image: Tall glass cup with lemon juice
+   File Name: src/images/lemonjuice.jpg
+   URL: https://unsplash.com/photos/sliced-lemon-beside-two-clear-drinking-glasses-_PaXoN4_2s0
    License: https://unsplash.com/license
 
-4. Image: Black and White Tuxedo Cat
-   File Name: images/black-white-cat.jpg
-   URL: https://unsplash.com/photos/shallow-focus-photography-of-tuxedo-cat-o6RbK3y7mK4
+4. Image: lemon pie with blueberry
+   File Name: src/images/lemoncake.jpg
+   URL: https://unsplash.com/photos/sliced-cheese-on-white-ceramic-plate-nLFfes9_OS8
    License: https://unsplash.com/license
 
-5. Image: Long-haired Cat with Christmas Scarf
-   File Name: images/longhair-scarf-cat.jpg
-   URL: https://unsplash.com/photos/white-and-brown-long-fur-cat-with-green-and-red-rose-on-head-hxEAE88Onv0
-   License: https://unsplash.com/license
-
-6. Image: Gray Cat Looking Down
-   File Name: images/lookdown-cat.jpg
-   URL: https://unsplash.com/photos/selective-focus-photography-of-gray-cat-beside-wall-MEb2jandkbc
-   License: https://unsplash.com/license
-
-7. Image: Orange Cat with Books
-   File Name: images/cat-books.jpg
-   URL: https://unsplash.com/photos/orange-tabby-cat-near-books-selective-focus-photography-VvO8e8n0Ffg
-   License: https://unsplash.com/license
-
-8. Image: Three Kittens Group Photo
-   File Name: images/kittens-group.jpg
-   URL: https://unsplash.com/photos/three-assorted-color-kittens-rplhB9mYF48
-   License: https://unsplash.com/license
-
-9. Image: Four Kittens in Basket
-   File Name: images/cats-in-basket.jpg
-   URL: https://unsplash.com/photos/four-assorted-color-tabby-kittens-on-brown-basket-YCPkW_r_6uA
-   License: https://unsplash.com/license
