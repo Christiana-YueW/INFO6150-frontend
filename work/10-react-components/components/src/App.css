@@ -1,0 +1,45 @@
+.App {
+
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    min-height: 100dvh;
+}
+
+main {
+    flex-grow: 1;
+    padding: 2rem;
+}
+
+.page-content {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.button-group {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.feedback-message {
+    margin-top: 1rem;
+    font-weight: bold;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.feedback-success {
+    color: green;
+    background-color: #e6f7e6;
+}
+
+.feedback-info {
+    color: blue;
+    background-color: #e6f0ff;
+}
