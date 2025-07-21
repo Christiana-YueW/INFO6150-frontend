@@ -1,0 +1,22 @@
+Images from Unsplash:
+
+1. Image: yellow lemon on the tree
+   File Name: src/images/lemontree.jpg
+   URL: https://unsplash.com/photos/bunch-of-yellow-lemon-Z-Y6I45f9kQ
+   License: https://unsplash.com/license
+
+2. Image: colorful lemon slices
+   File Name: src/images/lemonslices.jpg
+   URL: https://unsplash.com/photos/flat-lay-photography-of-sliced-pomegranate-lime-and-lemon-7r1HxvVC7AY
+   License: https://unsplash.com/license
+
+3. Image: Tall glass cup with lemon juice
+   File Name: src/images/lemonjuice.jpg
+   URL: https://unsplash.com/photos/sliced-lemon-beside-two-clear-drinking-glasses-_PaXoN4_2s0
+   License: https://unsplash.com/license
+
+4. Image: lemon pie with blueberry
+   File Name: src/images/lemoncake.jpg
+   URL: https://unsplash.com/photos/sliced-cheese-on-white-ceramic-plate-nLFfes9_OS8
+   License: https://unsplash.com/license
+
