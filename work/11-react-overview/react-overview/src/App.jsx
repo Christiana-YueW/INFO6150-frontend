@@ -2,26 +2,26 @@ import { useState } from 'react';
 import Header from './components/Header.jsx';
 import Home from './components/Home.jsx';
 import Profile from './components/Profile.jsx';
-import './styles/app.css'
+import './styles/App.css'
 
 const defaultProfiles = [
 
     {
-        pic: 'profile1.png',
+        pic: 'profile1.jpg',
         username: 'mimi',
         actualName: 'Mimi Cat',
         dogFree: true
     },
 
     {
-        pic: 'profile2.png',
+        pic: 'profile2.jpg',
         username: 'lala',
         actualName: 'Lala Cat',
         dogFree: false
     },
 
     {
-        pic: 'profile3.png',
+        pic: 'profile3.jpg',
         username: 'didi',
         actualName: 'Didi Cat',
         dogFree: true
@@ -32,7 +32,7 @@ const defaultProfiles = [
 
 function App() {
 
-    const [state, setState] = useState('home')
+    const [page, setPage] = useState('home')
     const [currentIndex, setCurrentIndex] = useState(0);
     const [profiles, setProfiles] = useState(defaultProfiles);
 
@@ -50,7 +50,7 @@ function App() {
                 profile={profile}
                 setPage={setPage}
                 currentIndex={currentIndex}
-                setCurretnIndex={setCurrentIndex}
+                setCurrentIndex={setCurrentIndex}
             />
 
             <main className="app">

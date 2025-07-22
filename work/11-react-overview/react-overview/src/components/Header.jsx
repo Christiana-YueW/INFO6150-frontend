@@ -1,5 +1,5 @@
 import { useState} from "react";
-import './styles/header.css';
+import '../styles/header.css';
 
 function Header({ profile, setPage, currentIndex, setCurrentIndex }) {
 
@@ -9,7 +9,7 @@ function Header({ profile, setPage, currentIndex, setCurrentIndex }) {
         <header className="header">
 
             <a href="#/" onClick={(e) => {e.preventDefault(); setPage('home'); }} className="logo-link">
-                <img src='./public/logo.png' className="logo" />
+                <img src="/logo.jpg" className="logo" alt="logo" />
             </a>
 
             <select
@@ -41,12 +41,15 @@ function Header({ profile, setPage, currentIndex, setCurrentIndex }) {
                             {profile.username}
                         </div>
 
-                        <button className="dropdown-link"
-                                onClick={(e) => {
+                        <button
+                            className="dropdown-link"
+                            onClick={(e) => {
                                     e.preventDefault();
                                     setPage('profile');
                                     setDropdownOpen(false);
-                                }} role="menuitem">
+                                }}
+                            role="menuitem"
+                        >
                             Profile Settings
                         </button>
 
