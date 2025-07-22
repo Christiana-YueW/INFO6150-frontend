@@ -1,5 +1,3 @@
-
-
 .profile-page {
   max-width: 600px;
 
@@ -118,6 +116,43 @@ button.cancel-btn {
 
 .cancel-btn:hover {
   background-color: #222;
+}
+
+@media (max-width: 500px) {
+
+  .profile-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profile-options {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .profile-value input,
+  .profile-value select {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .profile-card {
+    padding: 0.5rem;
+  }
+
+  .profile-options {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  input[type='text'],
+  select {
+    width: 100%;
+    max-width: none;
+  }
 }
 
 

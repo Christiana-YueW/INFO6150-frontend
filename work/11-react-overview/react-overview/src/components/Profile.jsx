@@ -7,7 +7,7 @@ function Profile({profile, setProfile}) {
         <section className="profile-page">
             <h1 className="profile-title"> Profile </h1>
 
-            <ProfileCard label="Profile Picture" type="select" value={profile.pic} onSave={(v) => setProfile({ ...profile, pic: v })} options={['profile1.png', 'profile2.png', 'profile3.png']} />
+            <ProfileCard label="Profile Picture" type="select" value={profile.pic} onSave={(v) => setProfile({ ...profile, pic: v })} options={['profile1.jpg', 'profile2.jpg', 'profile3.jpg']} />
 
             <ProfileCard label="Username" type="text" value={profile.username} onSave={(v) => setProfile({ ...profile, username: v })} validate={(v) => {
                 const trimmed = v.trim();
@@ -18,17 +18,28 @@ function Profile({profile, setProfile}) {
             />
 
             <ProfileCard label="Actual Name" type="text" value={profile.actualName} onSave={(v) => {
+               const trimmed = v.trim();
 
-                setProfile({ ...profile, actualName: v.trim() });
-                }}
-                         validate={(v) => {
-                             const trimmed = v.trim();
+               if (trimmed === '') {
+                  setProfile({
+                    ...profile,
+                    actualName: profile.username
+                  });
+                } else {
+                  setProfile({
+                    ...profile,
+                    actualName: trimmed
+                  });
+                }
+              }}
+              validate={(v) => {
 
-                            if ( v.length > 0 && trimmed === '') {
-                                return 'Cannot be only whitespace';
-                            }
-                            return '';
-            }}
+                if (v !== '' && v.trim() === '') {
+                  return 'Cannot be only whitespace';
+                }
+                return '';
+              }}
+
             />
 
             <ProfileCard label="Verified Dog Free" type="checkbox" value={profile.dogFree} onSave={(v) => setProfile({ ...profile, dogFree: v })}

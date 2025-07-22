@@ -33,3 +33,18 @@ button:focus {
     font-size: 0.8rem;
     margin-top: 0.5rem;
 }
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  main.app {
+    padding: 0.5rem;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+}

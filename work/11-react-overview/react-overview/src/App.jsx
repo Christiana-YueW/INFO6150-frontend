@@ -47,7 +47,8 @@ function App() {
     return (
         <>
             <Header
-                profile={profile}
+                profiles={profiles}
+                profile={profiles[currentIndex]}
                 setPage={setPage}
                 currentIndex={currentIndex}
                 setCurrentIndex={setCurrentIndex}

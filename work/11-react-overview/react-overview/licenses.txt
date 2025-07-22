@@ -1,22 +1,22 @@
 Images from Unsplash:
 
-1. Image: yellow lemon on the tree
-   File Name: src/images/lemontree.jpg
-   URL: https://unsplash.com/photos/bunch-of-yellow-lemon-Z-Y6I45f9kQ
+1. Image: black cat with sunglasses
+   File Name: public/logo.jpg
+   URL: https://unsplash.com/photos/russian-blue-cat-wearing-yellow-sunglasses-yMSecCHsIBc
    License: https://unsplash.com/license
 
-2. Image: colorful lemon slices
-   File Name: src/images/lemonslices.jpg
-   URL: https://unsplash.com/photos/flat-lay-photography-of-sliced-pomegranate-lime-and-lemon-7r1HxvVC7AY
+2. Image: white cat with open mouth
+   File Name: public/profile1.jpg
+   URL: https://unsplash.com/photos/white-kitten-Tn8DLxwuDMA
    License: https://unsplash.com/license
 
-3. Image: Tall glass cup with lemon juice
-   File Name: src/images/lemonjuice.jpg
-   URL: https://unsplash.com/photos/sliced-lemon-beside-two-clear-drinking-glasses-_PaXoN4_2s0
+3. Image: orange cat sleeping on the floor
+   File Name: public/profile2.jpg
+   URL: https://unsplash.com/photos/orange-tabby-cat-on-brown-parquet-floor-LEpfefQf4rU
    License: https://unsplash.com/license
 
-4. Image: lemon pie with blueberry
-   File Name: src/images/lemoncake.jpg
-   URL: https://unsplash.com/photos/sliced-cheese-on-white-ceramic-plate-nLFfes9_OS8
+4. Image: cat with a yellow scarf
+   File Name: public/profile3.jpg
+   URL: https://unsplash.com/photos/brown-tabby-cat-7GX5aICb5i4
    License: https://unsplash.com/license
 

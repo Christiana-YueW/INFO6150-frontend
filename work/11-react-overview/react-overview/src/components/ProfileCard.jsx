@@ -9,28 +9,18 @@ function ProfileCard({ label, type, value, onSave, validate, options = [] }) {
     function trySave() {
 
         let finalValue = input;
-        const trimmed = typeof input === 'string' ? input.trim() : input;
 
         if (validate) {
-            const msg = validate(trimmed);
+            const msg = validate(input);
             if (msg) {
                 setError(msg);
                 return;
             }
         }
 
-
-
-          if (label === 'Actual Name') {
-            // Allow empty string
-            if (trimmed === '') {
-              finalValue = '';
-            }
-          }
-
-        setError('');
-        onSave(finalValue);
-        setEditing(false);
+            setError('');
+            onSave(finalValue);
+            setEditing(false);
     }
 
     return (
@@ -38,7 +28,12 @@ function ProfileCard({ label, type, value, onSave, validate, options = [] }) {
         <div className="profile-card">
             <div className="profile-label-row">
                 <span className="profile-label">{label}</span>
-                {!editing && <button onClick={() => setEditing(true)} className="edit-btn"> ✏️ Edit </button>}
+                {!editing && <button onClick={() => {
+
+                    setEditing(true);
+                    setError('')
+                    setInput(value);
+                }} className="edit-btn" aria-label={`Edit ${label}`}> ✏️ Edit </button>}
             </div>
 
 
@@ -46,16 +41,23 @@ function ProfileCard({ label, type, value, onSave, validate, options = [] }) {
                 {editing ? (
                     <>
                         {type === 'text' && <input value={input} onChange={(e) => setInput(e.target.value)} aria-label={label} />}
-                        {type === 'select' && <select value={input} onChange={(e) => setInput(e.target.value)} >{options.map(opt => <option key={opt}>{opt}</option>)} </select> }
-                        {type === 'checkbox' && <input type="checkbox" checked={input} onChange={(e) => setInput(e.target.checked)} />}
+                        {type === 'select' && <select value={input} onChange={(e) => setInput(e.target.value)} aria-label={label} >{options.map(opt => <option key={opt}>{opt}</option>)} </select> }
+                        {type === 'checkbox' && <input type="checkbox" checked={input} onChange={(e) => setInput(e.target.checked)} aria-label={label} />}
 
 
                         <div className="profile-options">
-                            <button onClick={(e) => trySave()} className="save-btn"> ✅ Save </button>
-                            <button onClick={(e) => setEditing(false)} className="cancel-btn"> ❌ Cancel </button>
+                            <button onClick={(e) => trySave()} className="save-btn" aria-label={`Save ${label}`}> ✅ Save </button>
+
+                            <button onClick={(e) => {
+                                setEditing(false);
+                                setInput(value);
+                                setError('');
+                            }}
+                                className="cancel-btn" aria-label={`Cancel editing ${label}`}> ❌ Cancel
+                            </button>
                         </div>
 
-                        {error && <div className="validation-msg">{error}</div>}
+                        {error && <div id={`${label}-error`} className="validation-msg" role="alert">{error}</div>}
 
                     </>
                 ) : (

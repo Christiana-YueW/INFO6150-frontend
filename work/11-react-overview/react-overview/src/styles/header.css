@@ -102,3 +102,20 @@ header {
 .dropdown-link:hover {
   background-color: #eee;
 }
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+    gap: 0.5rem;
+  }
+
+  .logo {
+    height: 100px;
+  }
+
+  .profile-img {
+    height: 80px;
+  }
+}
