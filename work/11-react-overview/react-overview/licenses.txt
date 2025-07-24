@@ -1,0 +1,22 @@
+Images from Unsplash:
+
+1. Image: black cat with sunglasses
+   File Name: public/logo.jpg
+   URL: https://unsplash.com/photos/russian-blue-cat-wearing-yellow-sunglasses-yMSecCHsIBc
+   License: https://unsplash.com/license
+
+2. Image: white cat with open mouth
+   File Name: public/profile1.jpg
+   URL: https://unsplash.com/photos/white-kitten-Tn8DLxwuDMA
+   License: https://unsplash.com/license
+
+3. Image: orange cat sleeping on the floor
+   File Name: public/profile2.jpg
+   URL: https://unsplash.com/photos/orange-tabby-cat-on-brown-parquet-floor-LEpfefQf4rU
+   License: https://unsplash.com/license
+
+4. Image: cat with a yellow scarf
+   File Name: public/profile3.jpg
+   URL: https://unsplash.com/photos/brown-tabby-cat-7GX5aICb5i4
+   License: https://unsplash.com/license
+
