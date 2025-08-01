@@ -1,4 +1,4 @@
-import '../styles/header.css';
+import '../styles/App.css';
 
 function SkipLink() {
 

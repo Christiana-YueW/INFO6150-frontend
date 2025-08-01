@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import '../styles/header.css';
 
-function Header({ currentPage, onNavigate }) {
+function Header({ currentPage, onNavigate, userProfile }) {
 
     const pages = [
 
@@ -15,23 +15,40 @@ function Header({ currentPage, onNavigate }) {
 
     return (
         <header className="site-header">
-            <div
-                className="site-header_logo"
-                role="button"
-                tabIndex={0}
-                onClick={() => onNavigate('home')}
-                onKeyPress={e => e.key === 'Enter' && onNavigate('home')}
-            >
-                Find My Stuff
+            <div className='header-top'>
+                <img
+                    src="/weblogo.jpg"
+                    alt="find my stuff website logo"
+                    className="header-logo clickable"
+                    onClick={() => onNavigate('home')}
+                />
+
+                <h1 className="header-title">
+                    Find My Stuff
+                </h1>
+
+                <div
+                    className="profile-display clickable"
+                    onClick={() => onNavigate('settings')}
+
+                >
+                    <img
+                        src={userProfile.avatarUrl}
+                        alt={`${userProfile.name} avatar`}
+                        className="profile-avatar"
+                    />
+                    <span className="profile-name">{userProfile.name}</span>
+
+                </div>
             </div>
 
-            <nav className="site-header_nav" aria-label="Main navigation">
+            <nav className="header-nav" aria-label="Main navigation">
                 <ul className="nav-list">
                     {pages.map(p => (
-                        <li key={p.key} className="nav-list_item">
+                        <li key={p.key} className="nav-list__item">
                             <button
-                                className={`nav-list_link ${
-                                    currentPage === p.key ? 'nav-list_link--active' : ''
+                                className={`nav-list__link ${
+                                    currentPage === p.key ? 'nav-list__link--active' : ''
                                 }`}
                                 onClick={() => onNavigate(p.key)}
                             >
@@ -40,7 +57,6 @@ function Header({ currentPage, onNavigate }) {
                         </li>
 
                     ))}
-
                 </ul>
             </nav>
 
