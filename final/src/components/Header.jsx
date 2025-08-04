@@ -14,52 +14,56 @@ function Header({ currentPage, onNavigate, userProfile }) {
     ];
 
     return (
-        <header className="site-header">
-            <div className='header-top'>
-                <img
-                    src="/weblogo.jpg"
-                    alt="find my stuff website logo"
-                    className="header-logo clickable"
+        <header className="site-header" role="banner">
+            <div className="header-top">
+
+                <button
+                    type="button"
+                    className="logo-button clickable"
                     onClick={() => onNavigate('home')}
-                />
+                    aria-label="Go to homepage"
+                >
+                    <img src="/weblogo.jpg" alt="Find My Stuff logo" className="header-logo" />
+                </button>
 
-                <h1 className="header-title">
-                    Find My Stuff
-                </h1>
+                <h1 className="header-title"> Find My Stuff </h1>
+            </div>
 
-                <div
+            <div className="header-bottom">
+
+                <nav className="site-header__nav" aria-label="Primary navigation">
+                    <ul className="nav-list">
+                        {pages.map(({key, label}) => (
+                            <li key={key} className="nav-list__item">
+                                <button
+                                    className={`nav-list__link${currentPage === key ? ' nav-list__link--active' : ''}`}
+                                    onClick={() => onNavigate(key)}
+                                    aria-current={currentPage === key ? 'page' : undefined}
+                                >
+                                    {label}
+                                </button>
+                            </li>
+
+                        ))}
+                    </ul>
+                </nav>
+
+                <button
+                    type="button"
                     className="profile-display clickable"
                     onClick={() => onNavigate('settings')}
-
+                    aria-label="Go to settings page"
                 >
+
                     <img
-                        src={userProfile.avatarUrl}
+                        src={userProfile.avatarUrl || '/default-avatar.png'}
                         alt={`${userProfile.name} avatar`}
                         className="profile-avatar"
                     />
-                    <span className="profile-name">{userProfile.name}</span>
+                    <span className="profile-name"> {userProfile.name} </span>
 
-                </div>
+                </button>
             </div>
-
-            <nav className="header-nav" aria-label="Main navigation">
-                <ul className="nav-list">
-                    {pages.map(p => (
-                        <li key={p.key} className="nav-list__item">
-                            <button
-                                className={`nav-list__link ${
-                                    currentPage === p.key ? 'nav-list__link--active' : ''
-                                }`}
-                                onClick={() => onNavigate(p.key)}
-                            >
-                                {p.label}
-                            </button>
-                        </li>
-
-                    ))}
-                </ul>
-            </nav>
-
         </header>
     );
 }

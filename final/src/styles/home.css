@@ -1,0 +1,123 @@
+/* src/styles/home.css */
+
+.home-page {
+  padding: 2rem 1rem;
+}
+
+.introduction {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+.introduction h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.introduction .introduction-text {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: var(--color-accent);
+}
+
+.introduction .about {
+  font-size: 1rem;
+  color: #333;
+}
+
+.stats-panel {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.stat h2 {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.stat p {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.quick-actions {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.quick-actions button {
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  margin: 0 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 0.25rem;
+}
+
+.quick-actions button:hover,
+.quick-actions button:focus {
+  background: var(--color-accent);
+}
+
+.activity-accordion {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.activity-accordion summary {
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.activity-accordion ul {
+  margin: 1rem 0 0 1rem;
+}
+
+/* src/styles/home.css */
+
+.top-locations {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0 0;
+}
+
+.top-locations li {
+  margin: 0.25rem 0;
+}
+
+/* cards.css */
+.cards-panel {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.card {
+  flex: 1 1 calc(33.333% - 1rem);
+  background: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.quick-actions-panel .card-button {
+  flex: 1 1 45%;
+  padding: 1rem;
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.quick-actions-panel .card-button:hover,
+.quick-actions-panel .card-button:focus {
+  background: var(--color-accent);
+}

@@ -1,0 +1,95 @@
+/* src/styles/header.css */
+
+/* Header container: stack two rows */
+.site-header {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-primary);
+  color: white;
+}
+
+/* TOP ROW */
+.header-top {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+
+/* Logo styling */
+.logo-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+.header-logo {
+  height: 18rem;
+  width: auto;
+}
+
+/* Title centered */
+.header-title {
+  flex: 1;
+  margin: 0;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+/* BOTTOM ROW */
+.header-bottom {
+  display: flex;
+  align-items: center;
+  padding: 0.25rem 1rem;
+}
+
+/* Navigation */
+.site-header__nav {
+  flex: 1;
+  display: flex;             /* make nav a flex container */
+  justify-content: center;   /* center the <ul> inside it */
+}
+.site-header__nav .nav-list {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav-list__item {
+  margin: 0;
+}
+.nav-list__link {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.nav-list__link:hover,
+.nav-list__link:focus {
+  text-decoration: underline;
+}
+.nav-list__link--active {
+  border-bottom: 2px solid var(--color-accent);
+  font-weight: bold;
+}
+
+/* Profile flush right */
+.profile-display {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+.profile-avatar {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+.profile-name {
+  font-size: 1rem;
+}
