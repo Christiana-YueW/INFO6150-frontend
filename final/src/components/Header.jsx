@@ -8,8 +8,8 @@ function Header({ currentPage, onNavigate, userProfile }) {
         {key: 'home', label: 'Home'},
         {key: 'browse', label: 'Browse'},
         {key: 'add', label: 'Add'},
-        {key: 'settings', label: 'Settings'},
         {key: 'ask', label: 'Ask'},
+        {key: 'settings', label: 'Settings'},
 
     ];
 
