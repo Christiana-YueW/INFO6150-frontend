@@ -18,9 +18,11 @@ function ItemModal({item, onClose}) {
                 dialog.setAttribute("open", "");
             }
         } else if (dialog.open) {
-            dialog.Close();
+            dialog.close();
         }
-    }, [item]);
+        }, [item]);
+
+        if (!item) return null;
 
     return (
 

@@ -105,7 +105,7 @@ function BrowsePage({items = []}) {
                         value={sortOption}
                         onChange={(e) => setSortOption(e.target.value)}
                     >
-                        <option value="All">All</option>
+
                         <option value="name-asc">Name (A → Z)</option>
                         <option value="name-desc">Name (Z → A)</option>
                         <option value="loc-asc">Location (A → Z)</option>
