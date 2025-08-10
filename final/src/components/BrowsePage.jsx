@@ -10,7 +10,7 @@ function BrowsePage({items = []}) {
     const [activeItem, setActiveItem] = useState(null);
 
     function getLocationOptions() {
-        const set = new set();
+        const set = new Set();
         items.forEach((it) => set.add(it.location));
         return ["All", ...Array.from(set)];
 
@@ -18,9 +18,9 @@ function BrowsePage({items = []}) {
 
     //search
     function matchSearch(it) {
-        if (!searchText.trim()) return true;
-
         const search = searchText.trim().toLowerCase();
+
+        if (!searchText.trim()) return true;
         return (
             it.name.toLowerCase().includes(search) ||
             it.location.toLowerCase().includes(search)
@@ -134,7 +134,7 @@ function BrowsePage({items = []}) {
 
                             />
 
-                        </button>/
+                        </button>
 
                         <div className="card-body">
                             <h3 className="card-title">{item.name}</h3>

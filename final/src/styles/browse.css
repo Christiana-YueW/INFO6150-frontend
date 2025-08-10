@@ -1,0 +1,103 @@
+/* Overall browse page layout */
+.browse-page {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* Controls bar */
+.browse-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.browse-controls .control {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 200px;
+}
+
+.browse-controls label {
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+.browse-controls input,
+.browse-controls select {
+  font-size: 1rem;
+  padding: 0.5rem;
+  border: 1px solid var(--color-border, #ccc);
+  border-radius: 0.25rem;
+}
+
+/* Items grid */
+.items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.item-card {
+  background: #fff;
+  border: 1px solid var(--color-border, #ddd);
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.item-card:hover,
+.item-card:focus-within {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.item-photo {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.item-name {
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+.item-location {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Empty state */
+.empty-state {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+}
+
+/* Modal overrides for browse context */
+.item-modal .modal-content {
+  max-width: 400px;
+  padding: 1.5rem;
+}
+
+.item-modal img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 40rem) {
+  .browse-controls {
+    flex-direction: column;
+  }
+}
