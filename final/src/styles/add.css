@@ -1,12 +1,17 @@
-.add-page {
-  max-width: 42rem;
+.add-page h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
 
-  margin: 2rem auto;
+  color: #333333;
+  text-align: center;
 
-  padding: 0 1rem;
+  margin-bottom: 2rem;
 }
 
 .add-form {
+  max-width: 40rem;
+  margin: 0 auto;
+
   background: white;
 
   padding: 2rem;
@@ -163,13 +168,13 @@ select[aria-invalid="true"] {
 }
 
 .btn-secondary {
-  background: linear-gradient(135deg, #FFD54F 0%, #FFCA28 100%);
+  background: linear-gradient(135deg, #FFE082 0%, #FFD54F 100%);
   color: white;
   box-shadow: 0 2px 8px rgba(255, 213, 79, 0.25);
 }
 
 .btn-secondary:hover {
-  background: linear-gradient(135deg, #FFE082 0%, #FFD54F 100%);
+  background: linear-gradient(135deg, #FFF3B8 0%, #FFE082 100%);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(255, 213, 79, 0.3);
 }
@@ -179,7 +184,7 @@ select[aria-invalid="true"] {
   outline-offset: 3px;
 }
 
-@media (max-width: 40rem) {
+@media (max-width: 48rem) {
   .add-page {
     margin: 1rem auto;
     padding: 0 0.5rem;
@@ -196,6 +201,16 @@ select[aria-invalid="true"] {
   .btn-primary,
   .btn-secondary {
     width: 100%;
+  }
+}
+
+@media (max-width: 30rem) {
+  .add-page {
+    padding: 1rem 0.5rem;
+  }
+
+  .add-form {
+    padding: 1rem;
   }
 }
 

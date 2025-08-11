@@ -62,7 +62,7 @@ function BrowsePage({items = []}) {
     return (
 
         <section className="browse-page">
-            <h2> Browse My Items </h2>
+            <h1> Browse My Items </h1>
 
             <form className="browse-controls" onSubmit={(e) => e.preventDefault()}>
                 <div className="control">
@@ -72,7 +72,8 @@ function BrowsePage({items = []}) {
                         type="text"
                         value={searchText}
                         onChange={(e) => setSearchText(e.target.value)}
-                        placeholder="Search by name🏷️  or location📍"
+                        placeholder="Search by name or location"
+                        aria-label="Search by name or location"
                     />
                 </div>
 
@@ -85,6 +86,7 @@ function BrowsePage({items = []}) {
                         id="browse-filter"
                         value={locationFilter}
                         onChange={(e) => setLocationFilter(e.target.value)}
+                        aria-label="filter by location"
                     >
                         {getLocationOptions().map((loc) => (
 
@@ -104,6 +106,7 @@ function BrowsePage({items = []}) {
                         id="browse-sort"
                         value={sortOption}
                         onChange={(e) => setSortOption(e.target.value)}
+                        aria-label="sort the items"
                     >
 
                         <option value="name-asc">Name (A → Z)</option>
@@ -116,7 +119,7 @@ function BrowsePage({items = []}) {
                 </div>
             </form>
 
-            <ul className="card-grid" aria-live="polite">
+            <ul className="card-grid" aria-live="polite" aria-label="items list">
                 {visible.length === 0 && (
                     <li className="empty-result"> No items match. </li>
                 )}
@@ -124,7 +127,7 @@ function BrowsePage({items = []}) {
                 {visible.map((item) => (
                     <li key={item.id} className="card" role="article">
                         <button
-                            className="card-title"
+                            className="card-image-button"
                             onClick={() => handleCardOpen(item)}
                             aria-label={`View details for ${item.name}`}
                         >
@@ -137,15 +140,16 @@ function BrowsePage({items = []}) {
                         </button>
 
                         <div className="card-body">
-                            <h3 className="card-title">{item.name}</h3>
+                            <h2 className="card-title"> {item.name} </h2>
                             <p className="card-meta">
-                                <strong>Location:</strong> {item.location}
+                                Location: {item.location}
                             </p>
 
                             <div className="card-actions">
                                 <button
                                   className="btn-link"
                                   onClick={() => handleCardOpen(item)}
+                                  aria-label={`View details for ${item.name}`}
                                 >
                                   Details
                                 </button>
