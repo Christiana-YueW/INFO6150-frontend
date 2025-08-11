@@ -17,6 +17,16 @@ function SettingsPage({userProfile, onUpdateUserProfile, onChangePassword, theme
     //
     // const [errors, setErrors] = useState({});
 
+    const [avatarEditing, setAvatarEditing] = useState(false);
+    const [avatarSelected, setAvatarSelected] = useState(userProfile?.avatarUrl || "/avatar-default.jpg");
+
+    useEffect(() => {
+
+        if (!avatarEditing) {
+          setAvatarSelected(userProfile?.avatarUrl || "/avatar-default.jpg");
+        }
+    }, [userProfile?.avatarUrl, avatarEditing]);
+
 
     const avatarOptions = [
         "/avatar1-white.jpg",
@@ -24,7 +34,7 @@ function SettingsPage({userProfile, onUpdateUserProfile, onChangePassword, theme
         "/avatar3-orange.jpg",
         "/avatar-default.jpg",
 
-    ]
+    ];
 
     // function validateProfile() {
     //     const e = {};
@@ -90,7 +100,7 @@ function SettingsPage({userProfile, onUpdateUserProfile, onChangePassword, theme
 
                 {/*1. username */}
                 <SettingsCard
-                    label="User Name"
+                    label="User Name:"
                     type="text"
 
                     value={userProfile?.name || ""}
@@ -99,6 +109,7 @@ function SettingsPage({userProfile, onUpdateUserProfile, onChangePassword, theme
                       onSave={(v) =>
                         onUpdateUserProfile({
                           name: v.trim(),
+                            avatarUrl: userProfile?.avatarUrl || "/avatar-default.jpg",
                         })
                       }
                 />
@@ -106,45 +117,121 @@ function SettingsPage({userProfile, onUpdateUserProfile, onChangePassword, theme
 
                 {/*2. avatar */}
                 <div className="settings-card">
+
                     <div className="settings-label-row">
                         <span className="settings-label"> Avatar: </span>
+
+
+                        {!avatarEditing && (
+                            <button
+                                type="button"
+                                className="edit-btn"
+
+                                onClick={() => {
+                                    setAvatarSelected(userProfile?.avatarUrl || "/avatar-default.jpg");
+                                    setAvatarEditing(true);
+                                }}
+                                aria-label="Edit Avatar"
+                            >
+                                ✏️ Edit
+                            </button>
+                        )}
 
                     </div>
 
                     <div className="settings-value">
-                        <SettingsCard
-                            label="Avatar"
-                            type="select"
-                            value={userProfile?.avatarUrl || "/avatar-default.jpg"}
-                            options={avatarOptions}
+                        {avatarEditing ? (
+                            <>
+                                <div className="preset-strip" role="list">
 
-                            onSave={(v) => onUpdateUserProfile({ avatarUrl: v })}
-                        />
+                                    {avatarOptions.map((src) => {
+                                        const isSel = avatarSelected === src;
+                                        const readable = src.split("/").pop().replace(".jpg", "").replaceAll("-", " ");
 
-                        <div className="avatar-preview-row">
 
-                            <img
-                                className="avatar-preview"
-                                src={userProfile?.avatarUrl || "/avatar-default.jpg"}
-                                alt="My Avatar"
-                            />
+                                        return (
+                                            <button
+                                                key={src}
+                                                type="button"
+                                                className={`preset-avatar${isSel ? " is-selected" : ""}`}
 
-                            <span className="avatar-current-label">
-                                Current Avatar
-                            </span>
+                                                onClick={() => setAvatarSelected(src)}
 
-                        </div>
+                                                aria-pressed={isSel ? "true" : "false"}
+                                                aria-label={`Select ${readable}`}
+                                                role="listitem"
+                                            >
+                                                <img src={src} alt="Preset avatar option" />
+
+                                            </button>
+
+                                        );
+
+                                    })}
+
+                                </div>
+
+                                <div className="settings-options">
+                                    <button
+                                        type="button"
+                                        className="save-btn"
+                                        onClick={() => {
+
+                                            onUpdateUserProfile({ avatarUrl: avatarSelected })
+                                            setAvatarEditing(false);
+                                        }}
+                                        aria-label="Save Avatar"
+                                    >
+                                        ✅ Save
+                                    </button>
+
+                                    <button
+                                        type="button"
+                                        className="cancel-btn"
+                                        onClick={() => {
+
+                                            setAvatarSelected(userProfile?.avatarUrl || "/avatar-default.jpg");
+                                            setAvatarEditing(false);
+
+                                        }}
+                                        aria-label="Cancel Avatar"
+                                        >
+                                            ❌ Cancel
+                                    </button>
+
+                                </div>
+
+                            </>
+
+
+                            ):(
+                                <div className="avatar-preview-row">
+                                    <img
+                                        className="avatar-preview"
+                                        src={userProfile?.avatarUrl || "/avatar-default.jpg"}
+                                        alt="Current Avatar"
+                                    />
+
+                                    <span className="avatar-current-label">  Preview </span>
+
+                                </div>
+
+
+                            )
+                        }
 
                     </div>
 
+
                 </div>
+
             </div>
 
             <div className="settings-section">
                 <h2 className="settings-section-title"> Password </h2>
 
                 <SettingsCardPassword
-                    label="Password"
+                    label="Password:"
                     onSave={(pwd) => onChangePassword(pwd)}
                 />
 
@@ -189,15 +276,11 @@ function SettingsPage({userProfile, onUpdateUserProfile, onChangePassword, theme
 
                 </form>
 
-            )
-            }
+            )}
 
         </section>
 
     );
-
-
-
 
 
 }

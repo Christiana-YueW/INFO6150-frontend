@@ -14,6 +14,7 @@ function SettingsCard({label, type, value, options = [], onSave, validate}) {
             const message = validate(i);
             if (message) {
                 setError(message);
+                return;
 
             }
         }
