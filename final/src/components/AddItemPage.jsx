@@ -9,7 +9,7 @@ function AddItemPage({ onAddItem, onNavigate}) {
     const [location, setLocation] = useState('')
     const [otherLocation, setOtherLocation] = useState('')
 
-    const [photoPreview, setPhotoPreview] = useState('null')
+    const [photoPreview, setPhotoPreview] = useState(null)
     const [errors, setErrors] = useState({})
 
     const presentLocations = ['Living Room', 'Kitchen', 'Office', 'Black Cabinet', 'Bedroom', 'Garage'];
@@ -140,7 +140,7 @@ function AddItemPage({ onAddItem, onNavigate}) {
 
                 {/* photo upload */}
                 <div className="form-group">
-                    <label htmlFor="item-other"> Photo(Optional) </label>
+                    <label htmlFor="item-photo"> Photo(Optional) </label>
                     <input
                         type="file"
                         id="item-photo"
