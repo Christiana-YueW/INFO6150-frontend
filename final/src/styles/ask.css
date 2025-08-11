@@ -1,0 +1,95 @@
+/* src/styles/ask.css */
+.ask-page {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.ask-intro { margin: 0.5rem 0 1rem; }
+
+/* Transcript area */
+.chat-log {
+  border: 1px solid var(--border, #ccc);
+  border-radius: 0.5rem;
+  background: var(--bg);
+  min-height: 12rem;
+  max-height: 24rem;
+  overflow: auto;
+  padding: 0.75rem;
+}
+
+.chat-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+/* message bubbles */
+.chat-msg { display: flex; }
+.chat-msg--user { justify-content: flex-end; }
+.chat-msg--assistant { justify-content: flex-start; }
+
+.chat-bubble {
+  max-width: 80ch;
+  padding: 0.6rem 0.8rem;
+  border-radius: 0.75rem;
+  line-height: 1.4;
+  white-space: pre-wrap;
+}
+.chat-msg--user .chat-bubble {
+  background: var(--color-primary);
+  color: #fff;
+  border-top-right-radius: 0.2rem;
+}
+.chat-msg--assistant .chat-bubble {
+  background: #f3f3f3;
+  color: var(--fg);
+  border-top-left-radius: 0.2rem;
+}
+
+/* Input row */
+.chat-form {
+  margin-top: 0.75rem;
+  display: grid;
+  gap: 0.5rem;
+}
+.chat-input {
+  font-size: 1rem;
+  padding: 0.5rem;
+  border: 1px solid var(--border, #ccc);
+  border-radius: 0.5rem;
+  resize: vertical;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.send-button {
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: var(--color-accent);
+  color: #fff;
+  cursor: pointer;
+}
+.send-button:hover,
+.send-button:focus { opacity: 0.9; }
+
+/* util */
+.visually-hidden {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden; clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+
+/* small screens */
+@media (max-width: 40rem) {
+  .ask-page { padding: 0 0.5rem; }
+}
