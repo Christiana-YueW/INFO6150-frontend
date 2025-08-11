@@ -1,0 +1,110 @@
+/* src/styles/setting.css */
+
+/* page + sections */
+.setting-page {
+  max-width: 760px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.settings-section {
+  border: 1px solid var(--border, #ccc);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background: var(--bg);
+}
+
+.settings-section-title {
+  margin: 0 0 0.75rem 0;
+}
+
+/* card layout (like your previous ProfileCard) */
+.settings-card {
+  border: 1px solid var(--border, #ccc);
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  margin-bottom: 0.75rem;
+  background: var(--bg);
+}
+
+.settings-label-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.settings-label {
+  font-weight: 600;
+}
+
+.settings-value {
+  margin-top: 0.5rem;
+}
+
+.settings-input,
+.settings-select {
+  font-size: 1rem;
+  padding: 0.5rem;
+  border: 1px solid var(--border, #ccc);
+  border-radius: 0.375rem;
+}
+
+.settings-options {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+/* buttons (re-usable class names from your style) */
+.edit-btn,
+.save-btn,
+.cancel-btn {
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.edit-btn { background: var(--color-accent); color: #fff; }
+.save-btn { background: var(--color-primary); color: #fff; }
+.cancel-btn { background: #666; color: #fff; }
+
+/* validation */
+.validation-msg {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--color-error, lightcoral);
+}
+
+/* small helpers for avatar card */
+.avatar-preview-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+.avatar-preview {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--border, #ccc);
+}
+.avatar-current-label {
+  font-size: 0.9rem;
+  color: var(--fg);
+}
+
+/* radio line (you already used this) */
+.radio-line {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-right: 1rem;
+  margin-top: 0.25rem;
+}
+
+@media (max-width: 40rem) {
+  .setting-page { padding: 0 0.5rem; }
+}

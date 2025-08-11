@@ -1,219 +1,155 @@
 import { useState, useEffect, useRef } from "react";
-import "../styles/setting.css"
+import SettingsCard from "./SettingsCard.jsx";
+import SettingsCardPassword from "./SettingsCardPassword.jsx";
+
+import "../styles/settings.css"
 
 function SettingsPage({userProfile, onUpdateUserProfile, onChangePassword, theme, onSetTheme}) {
 
-    const [username, setUsername] = useState(userProfile?.name || "");
-    const [avatar, setAvatar] = useState("default");
-    const [presetAvatar, setPresetAvatar] = useState("/avatar1-white.jpg");
+
+    // const [username, setUsername] = useState(userProfile?.name || "");
+    // const [avatar, setAvatar] = useState("default");
+    // const [presetAvatar, setPresetAvatar] = useState("/avatar1-white.jpg");
+    //
+    //
+    // const [pwd1, setPwd1] = useState("");
+    // const [pwd2, setPwd2] = useState("");
+    //
+    // const [errors, setErrors] = useState({});
 
 
-    const [pwd1, setPwd1] = useState("");
-    const [pwd2, setPwd2] = useState("");
-
-    const [errors, setErrors] = useState({});
-
-
-    const presetList = [
+    const avatarOptions = [
         "/avatar1-white.jpg",
         "/avatar2-scarf.jpg",
         "/avatar3-orange.jpg",
+        "/avatar-default.jpg",
 
     ]
 
-    function validateProfile() {
-        const e = {};
-
-        if (!username.trim())
-            e.username = "Username cannot be empty.";
-        return e;
-    }
-
-    function handleSaveProfile(e) {
-
-        e.preventDefault();
-
-        const eo = validateProfile();
-
-        setErrors(eo);
-        if (Object.keys(eo).length > 0) return;
-
-        let avatarUrl = userProfile?.avatarUrl || "/default-avatar.png";
-
-        if (avatar === "preset") avatarUrl = presetAvatar;
-
-        onUpdateUserProfile({
-            name: username.trim(),
-            avatarUrl
-        });
-    }
-
-    function validatePassword() {
-
-        const e = {};
-
-        if (pwd1.length < 6) e.pwd1 = "Password must be at least 6 characters.";
-        if (pwd2 !== pwd1) e.pwd2 = "Passwords do not match.";
-
-        return e;
-
-    }
-
-    function handleSavePassword(e) {
-
-        e.preventDefault();
-
-        const eo = validatePassword();
-
-        setErrors((prev) => ({ ...prev, ...eo }));
-
-        if (Object.keys(eo).length > 0) return;
-
-        onChangePassword(pwd1);
-
-        setPwd1("");
-        setPwd2("");
-    }
+    // function validateProfile() {
+    //     const e = {};
+    //
+    //     if (!username.trim())
+    //         e.username = "Username cannot be empty.";
+    //     return e;
+    // }
+    //
+    // function handleSaveProfile(e) {
+    //
+    //     e.preventDefault();
+    //
+    //     const eo = validateProfile();
+    //
+    //     setErrors(eo);
+    //     if (Object.keys(eo).length > 0) return;
+    //
+    //     let avatarUrl = userProfile?.avatarUrl || "/default-avatar.jpg";
+    //
+    //     if (avatar === "preset") avatarUrl = presetAvatar;
+    //
+    //     onUpdateUserProfile({
+    //         name: username.trim(),
+    //         avatarUrl
+    //     });
+    // }
+    //
+    // function validatePassword() {
+    //
+    //     const e = {};
+    //
+    //     if (pwd1.length < 6) e.pwd1 = "Password must be at least 6 characters.";
+    //     if (pwd2 !== pwd1) e.pwd2 = "Passwords do not match.";
+    //
+    //     return e;
+    //
+    // }
+    //
+    // function handleSavePassword(e) {
+    //
+    //     e.preventDefault();
+    //
+    //     const eo = validatePassword();
+    //
+    //     setErrors((prev) => ({ ...prev, ...eo }));
+    //
+    //     if (Object.keys(eo).length > 0) return;
+    //
+    //     onChangePassword(pwd1);
+    //
+    //     setPwd1("");
+    //     setPwd2("");
+    // }
 
 
     return (
         <section className="setting-page">
             <h1> Settings </h1>
 
-            <form className="settings-section" onSubmit={handleSaveProfile} noValidate>
+            <div className="settings-section" >
                 <h2 className="settings-section-title"> Personal Profile </h2>
 
                 {/*1. username */}
-                <div className="form-group">
-                    <label htmlFor="set-username" className="form-label"> User Name </label>
-                    <input
-                        id="set-username"
-                        type="text"
-                        value={username}
+                <SettingsCard
+                    label="User Name"
+                    type="text"
 
-                        onChange={(e) => setUsername(e.target.value)}
-                        aria-invalid={!!errors.username}
-                        aria-describedby={errors.username ? "err-username" : undefined}
-                    />
+                    value={userProfile?.name || ""}
 
-                    {errors.username && (
-                        <div id="err-username" className="error"> {errors.username} </div>
-                    )}
+                    validate={(v) => (!v.trim() ? "Username cannot be empty." : "")}
+                      onSave={(v) =>
+                        onUpdateUserProfile({
+                          name: v.trim(),
+                        })
+                      }
+                />
 
-                </div>
 
                 {/*2. avatar */}
-                <fieldset className="form-group">
+                <div className="settings-card">
+                    <div className="settings-label-row">
+                        <span className="settings-label"> Avatar: </span>
 
-                    <legend> Avatar </legend>
+                    </div>
 
-                    <label className="radio-line">
-                        <input
-                          type="radio"
-                          name="avatar"
-                          value="default"
-                          checked={avatar === "default"}
-                          onChange={() => setAvatar("default")}
-                        />
-                            Use current avatar
-                    </label>
+                    <div className="settings-value">
+                        <SettingsCard
+                            label="Avatar"
+                            type="select"
+                            value={userProfile?.avatarUrl || "/avatar-default.jpg"}
+                            options={avatarOptions}
 
-                    <label className="radio-line">
-
-                        <input
-                          type="radio"
-                          name="avatar-choice"
-                          value="preset"
-                          checked={avatar === "preset"}
-                          onChange={() => setAvatar("preset")}
+                            onSave={(v) => onUpdateUserProfile({ avatarUrl: v })}
                         />
 
-                        Choose a new avatar
-                    </label>
+                        <div className="avatar-preview-row">
 
+                            <img
+                                className="avatar-preview"
+                                src={userProfile?.avatarUrl || "/avatar-default.jpg"}
+                                alt="My Avatar"
+                            />
 
-                    {avatar === "preset" && (
-
-                        <div className="preset-strip" role="list">
-
-                          {presetList.map((src) => (
-
-                              <button
-                                  key={src}
-                                  type="button"
-                                  className={`preset-avatar${presetAvatar === src ? " is-selected" : ""}`}
-                                  onClick={() => setPresetAvatar(src)}
-
-                                  aria-pressed={presetAvatar === src ? "true" : "false"}
-                                  aria-label="Select preset avatar"
-                              >
-                                  <img src={src} alt="Preset avatar option" />
-
-                              </button>
-
-                          ))}
+                            <span className="avatar-current-label">
+                                Current Avatar
+                            </span>
 
                         </div>
-                    )}
 
-                </fieldset>
-
-                <div className="form-actions">
-                    <button type="submit"> Save </button>
-                </div>
-
-            </form>
-
-            {/*3. password */}
-            <form className="settings-section" onSubmit={handleSavePassword} noValidate>
-                <h2 className="settings-section-title"> Password: </h2>
-
-                <div className="form-group">
-
-                  <label htmlFor="pwd-1"> New Password </label>
-
-                    <input
-                        id="pwd-1"
-                        type="password"
-                        value={pwd1}
-
-                        onChange={(e) => setPwd1(e.target.value)}
-
-                        aria-invalid={!!errors.pwd1}
-                        aria-describedby={errors.pwd1 ? "err-pwd1" : undefined}
-                    />
-
-                    {errors.pwd1 && <div id="err-pwd1" className="error">{errors.pwd1}</div>}
+                    </div>
 
                 </div>
+            </div>
 
-                <div className="form-group">
+            <div className="settings-section">
+                <h2 className="settings-section-title"> Password </h2>
 
-                  <label htmlFor="pwd-2">Confirm Password</label>
+                <SettingsCardPassword
+                    label="Password"
+                    onSave={(pwd) => onChangePassword(pwd)}
+                />
 
-                  <input
-                    id="pwd-2"
-                    type="password"
-                    value={pwd2}
+            </div>
 
-                    onChange={(e) => setPwd2(e.target.value)}
-
-                    aria-invalid={!!errors.pwd2}
-                    aria-describedby={errors.pwd2 ? "err-pwd2" : undefined}
-                  />
-
-                  {errors.pwd2 && <div id="err-pwd2" className="error">{errors.pwd2}</div>}
-
-                </div>
-
-                <div className="form-actions">
-                  <button type="submit">Save Password</button>
-
-                </div>
-
-            </form>
-
-            {/*4. upload avatar */}
 
 
             {/*5. theme change  */}
