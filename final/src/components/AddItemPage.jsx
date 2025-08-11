@@ -2,7 +2,7 @@ import { useState} from "react";
 
 import '../styles/add.css'
 
-function AddItemPage() {
+function AddItemPage({ onAddItem, onNavigate}) {
 
 
     const [name, setName] = useState('')
