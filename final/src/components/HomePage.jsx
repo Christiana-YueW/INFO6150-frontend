@@ -1,7 +1,7 @@
 import {useState} from "react";
 import '../styles/home.css';
 
-function HomePage({items, onNavigate}) {
+function HomePage({items, onNavigate, userProfile}) {
 
     const [recentActivity] = useState([
 
@@ -29,10 +29,10 @@ function HomePage({items, onNavigate}) {
         <section className="home-page">
 
             <div className="introduction">
-                <h1> Find My Stuff </h1>
-                <p className="introduction-text"> Never lost track of your belongings again. </p>
+                <h1> Hi {userProfile?.name ? `, ${userProfile.name}` : "" }!  </h1>
+                <p className="introduction-text">  🍋 Never lost track of your belongings again.</p>
                 <p className="about">
-                    Snap a photo, tag it with a name and location, and always know exactly where you stored your items.
+                    🔎 Snap a photo, tag it with a name and location, and always know exactly where you stored your items.
                 </p>
             </div>
 
@@ -44,10 +44,20 @@ function HomePage({items, onNavigate}) {
 
                 <div className="card">
                     <h2> Common Locations: </h2>
-                    <ul className="top-locations">
-                        {topLocations.map(([loc, count]) => (
-                        <li key={loc}>{loc} ({count})</li> ))}
-                    </ul>
+
+                    {topLocations.length > 0 ? (
+                        <ul className="top-locations">
+                            {topLocations.map(([loc, count]) => (
+                                <li key={loc}>{loc} ({count})</li>
+                            ))}
+
+                        </ul>
+                    ): (
+                        <p className="no-items"> No Saved Items Yet</p>
+                    )
+
+                    }
+
                 </div>
 
                 <div className="card">

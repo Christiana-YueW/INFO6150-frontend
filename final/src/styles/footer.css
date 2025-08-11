@@ -1,0 +1,193 @@
+.site-footer {
+
+  background: linear-gradient(to top, #FFFACD 0%, #FFFEF5 100%);
+  border-top: 2px solid rgba(255, 220, 0, 0.2);
+
+  margin-top: auto;
+  padding: 0.5rem 1rem;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 1rem;
+  margin: 0;
+  position: relative;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+
+}
+
+.brand__link {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 0.5rem;
+  background: transparent;
+  border: none;
+
+  padding: 0;
+  cursor: pointer;
+
+  font-family: inherit;
+  font-size: 1.1rem;
+  font-weight: 600;
+
+  color: #FFB800;
+  transition: transform 0.2s ease;
+
+  flex: 0 0 auto;
+}
+
+.brand__link:hover {
+  transform: scale(1.05) rotate(-2deg);
+}
+
+.brand__link:focus-visible {
+  outline: 2px solid #FFD54F;
+  outline-offset: 4px;
+  border-radius: 0.25rem;
+}
+
+.brand__logo {
+  font-size: 1.25rem;
+}
+
+.brand__name {
+  color: #FFB800;
+}
+
+.brand__info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  gap: 0.5rem;
+
+  text-align: center;
+}
+
+.brand__tagline {
+  font-size: 1.0rem;
+  color: #666666;
+  margin: 0;
+}
+
+.brand__tagline::after {
+  content: "•";
+
+  color: rgba(255, 220, 0, 0.5);
+}
+
+.brand__user {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: rosybrown;
+  margin: 0;
+}
+
+.footer-shortcuts {
+  display: flex;
+  align-items: center;
+
+  margin-left: auto;
+}
+
+.back-to-top {
+  display: inline-block;
+
+  padding: 0.35rem 0.8rem;
+  background: white;
+  color: #666666;
+  font-weight: bold;
+
+  border: 2.5px solid rgba(255, 220, 0, 0.3);
+  border-radius: 1.5rem;
+
+  text-decoration: none;
+  font-size: 0.9rem;
+
+  transition: all 0.2s ease;
+}
+
+.back-to-top:hover {
+  background: #FFE082;
+  color: #333333;
+
+  transform: translateY(-2px);
+}
+
+.back-to-top:focus-visible {
+  outline: 2px solid #FFD54F;
+  outline-offset: 2px;
+}
+
+.footer-bottom {
+  padding-top: 0.35rem;
+  padding-bottom: 0;
+  border-top: 1px solid rgba(255, 220, 0, 0.2);
+  text-align: center;
+}
+
+.copyright {
+  font-size: 0.8rem;
+  color: #666666;
+  margin: 0;
+}
+
+@media (max-width: 48rem) {
+  .footer-top {
+    position: static;
+
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .brand__info {
+    position: static;
+
+    transform: none;
+
+    flex-direction: column;
+    order: 2;
+  }
+
+  .brand__tagline::after {
+    display: none;
+  }
+
+  .brand__link {
+    order: 1;
+  }
+
+  .footer-shortcuts {
+    order: 3;
+    align-self: center;
+
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 22.5rem) {
+  .site-footer {
+    padding: 1.5rem 1rem 0.75rem;
+  }
+
+  .brand__link {
+    font-size: 1.1rem;
+  }
+
+  .brand__logo {
+    font-size: 1.25rem;
+  }
+}

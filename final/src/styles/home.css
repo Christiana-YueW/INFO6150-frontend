@@ -1,123 +1,254 @@
-/* src/styles/home.css */
-
 .home-page {
   padding: 2rem 1rem;
+  max-width: 75rem;
+
+  margin: 0 auto;
 }
 
 .introduction {
   text-align: center;
-  max-width: 600px;
-  margin: 0 auto 2rem;
+  max-width: 40rem;
+  margin: 0 auto 2.5rem;
 }
 
 .introduction h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+
+  background: rosybrown;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  margin-bottom: 0.75rem;
+
 }
 
-.introduction .introduction-text {
-  font-size: 1.25rem;
+.introduction-text {
+  font-size: 1.2rem;
+
   margin-bottom: 1rem;
-  color: var(--color-accent);
+  color: #FF8C00;
 }
 
-.introduction .about {
+.about {
   font-size: 1rem;
-  color: #333;
-}
+  line-height: 1.25rem;
 
-.stats-panel {
-  display: flex;
-  justify-content: space-around;
-  text-align: center;
-  margin-bottom: 2rem;
-}
+  color: #666666;
 
-.stat h2 {
-  font-size: 1rem;
-  margin-bottom: 0.25rem;
-}
-
-.stat p {
-  font-size: 1.5rem;
   margin: 0;
 }
 
-.quick-actions {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.quick-actions button {
-  background: var(--color-primary);
-  color: white;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  margin: 0 0.5rem;
-  font-size: 1rem;
-  cursor: pointer;
-  border-radius: 0.25rem;
-}
-
-.quick-actions button:hover,
-.quick-actions button:focus {
-  background: var(--color-accent);
-}
-
-.activity-accordion {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.activity-accordion summary {
-  font-size: 1.25rem;
-  cursor: pointer;
-}
-
-.activity-accordion ul {
-  margin: 1rem 0 0 1rem;
-}
-
-/* src/styles/home.css */
-
-.top-locations {
-  list-style: none;
-  padding: 0;
-  margin: 0.5rem 0 0 0;
-}
-
-.top-locations li {
-  margin: 0.25rem 0;
-}
-
-/* cards.css */
 .cards-panel {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+
+  gap: 1.5rem;
+
   margin-bottom: 2rem;
 }
 
 .card {
-  flex: 1 1 calc(33.333% - 1rem);
-  background: white;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background: #FFFFFF;
+
+  padding: 1.5rem;
+  border: 2px solid rgba(255, 220, 0, 0.2);
+
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(255, 223, 0, 0.1);
+
   text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.quick-actions-panel .card-button {
-  flex: 1 1 45%;
-  padding: 1rem;
-  background: var(--color-primary);
-  color: white;
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(255, 223, 0, 0.2);
+}
+
+.card h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+
+  color: #FFB800;
+
+  margin-bottom: 0.75rem;
+}
+
+.card p {
+  font-size: 1.2rem;
+
+  color: #333333;
+  margin: 0;
+}
+
+.top-locations {
+  list-style: none;
+
+  padding: 0;
+  margin: 0;
+}
+
+.top-locations li {
+  padding: 0.35rem 0;
+
+  color: #666666;
+  font-size: 0.95rem;
+
+  border-bottom: 1px solid rgba(255, 220, 0, 0.15);
+}
+
+.top-locations li:last-child {
+  border-bottom: none;
+}
+
+.no-items {
+  font-size: 0.95rem;
+  color: #999999;
+  font-style: italic;
+  margin: 0;
+}
+
+.quick-actions-panel {
+  display: flex;
+
+  gap: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.card-button {
+  flex: 1;
+  padding: 1.25rem 1rem;
+
+  background: linear-gradient(135deg, #FFD54F 0%, #FFCA28 80%);
+  color: #FFFFFF;
+
+  font-size: 1.25rem;
+  font-weight: 500;
+  font-family: inherit;
+
   border: none;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   cursor: pointer;
+
+  transition: all 0.2s ease;
 }
 
-.quick-actions-panel .card-button:hover,
-.quick-actions-panel .card-button:focus {
-  background: var(--color-accent);
+.card-button:hover {
+  background: linear-gradient(135deg, #FFE082 0%, #FFD54F 80%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 213, 79, 0.3);
+}
+
+.card-button:focus-visible {
+  outline: 2px solid #FFB800;
+  outline-offset: 3px;
+}
+
+.activity-accordion {
+  max-width: 40rem;
+
+  margin: 2rem auto 0;
+
+  background: #FFFFFF;
+
+  padding: 1.5rem;
+  border: 2px solid rgba(255, 220, 0, 0.2);
+
+  border-radius: 1rem;
+}
+
+.activity-accordion h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+
+  color: #FFB800;
+  margin-bottom: 1rem;
+}
+
+.activity-accordion ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.activity-accordion li {
+  padding: 0.25rem 0;
+
+  color: #666666;
+  font-size: 0.9rem;
+
+  border-bottom: 1px solid rgba(255, 220, 0, 0.1);
+  transition: padding-left 0.2s ease;
+}
+
+.activity-accordion li:last-child {
+  border-bottom: none;
+}
+
+.activity-accordion li:hover {
+  padding-left: 0.5rem;
+  color: #333333;
+}
+
+@media (max-width: 48rem) {
+  .home-page {
+    padding: 1.5rem 1rem;
+  }
+
+  .introduction h1 {
+    font-size: 1.6rem;
+  }
+
+  .introduction-text {
+    font-size: 1.1rem;
+  }
+
+  .cards-panel {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .quick-actions-panel {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .card-button {
+    width: 100%;
+  }
+}
+
+
+
+
+
+/* small!!! */
+
+
+@media (max-width: 22.5rem) {
+  .introduction h1 {
+    font-size: 1.55rem;
+  }
+
+  .card h2 {
+    font-size: 1rem;
+  }
+
+  .card p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .card-button,
+  .activity-accordion li {
+    transition: none;
+  }
+
+  .card:hover,
+  .card-button:hover {
+    transform: none;
+  }
 }

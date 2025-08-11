@@ -17,7 +17,7 @@ function AddItemPage({ onAddItem, onNavigate}) {
     function handlePhotoUpload(e) {
         const file = e.target.files[0];
         if (!file) {
-            setPhotoPreview('null');
+            setPhotoPreview(null);
             return;
         }
             const reader = new FileReader();
@@ -43,8 +43,9 @@ function AddItemPage({ onAddItem, onNavigate}) {
 
         setErrors(newErrors);
 
-        if (Object.keys(newErrors).length > 0)
+        if (Object.keys(newErrors).length > 0) {
             return;
+        }
 
         const finalLocation = location === 'Other' ? otherLocation.trim() : location;
 
@@ -59,13 +60,13 @@ function AddItemPage({ onAddItem, onNavigate}) {
     return (
 
         <section className="add-page">
-            <h2> Add Your New Item </h2>
+            <h1> Add Your New Item </h1>
 
             <form className="add-form" onSubmit={handleSubmit} noValidate>
 
                     {/*name */}
                 <div className="form-group">
-                    <label htmlFor="item-name"> Item Name </label>
+                    <label htmlFor="item-name"> Item Name: </label>
                     <input
                             type="text"
                             value={name}
@@ -75,11 +76,12 @@ function AddItemPage({ onAddItem, onNavigate}) {
                             onChange={(e) => setName(e.target.value)}
                             aria-invalid={!!errors.name}
                             aria-describedby={errors.name ? 'error-name' : undefined}
+                            aria-required="true"
 
                     />
 
                     {errors.name && (
-                        <div id="error-name" className="error">
+                        <div id="error-name" className="error" role="alert">
                             {errors.name}
                         </div>
                     )}
@@ -87,7 +89,7 @@ function AddItemPage({ onAddItem, onNavigate}) {
 
                     {/*location */}
                 <div className="form-group">
-                    <label htmlFor="item-location"> Item Location </label>
+                    <label htmlFor="item-location"> Item Location: </label>
                     <select
 
                         value={location}
@@ -96,9 +98,10 @@ function AddItemPage({ onAddItem, onNavigate}) {
                         onChange={(e) => setLocation(e.target.value)}
                         aria-invalid={!!errors.location}
                         aria-describedby={errors.location ? 'error-location' : undefined}
+                        aria-required="true"
                     >
 
-                        <option value="">Select A Location</option>
+                        <option value="">Select a Location</option>
                         {presentLocations.map(loc => (
                             <option key={loc} value={loc}>
                                 {loc}
@@ -108,7 +111,7 @@ function AddItemPage({ onAddItem, onNavigate}) {
                     </select>
 
                     {errors.location && (
-                        <div id="error-location" className="error">
+                        <div id="error-location" className="error" role="alert">
                             {errors.location}
                         </div>
                     )}
@@ -119,7 +122,7 @@ function AddItemPage({ onAddItem, onNavigate}) {
                 {/*if Other location */}
                 {location === 'Other' && (
                     <div className="form-group">
-                        <label htmlFor="other-location"> Other Location </label>
+                        <label htmlFor="other-location"> Other Location: </label>
                         <input
                         type="text"
                         value={otherLocation}
@@ -128,9 +131,10 @@ function AddItemPage({ onAddItem, onNavigate}) {
                         onChange={(e) => setOtherLocation(e.target.value)}
                         aria-invalid={!!errors.otherLocation}
                         aria-describedby={errors.otherLocation ? 'error-otherLocation' : undefined}
+                        aria-required="true"
                         />
                         {errors.otherLocation && (
-                            <div id="error-otherLocation" className="error">
+                            <div id="error-otherLocation" className="error" role="alert">
                                 {errors.otherLocation}
                             </div>
                         )}
@@ -140,7 +144,7 @@ function AddItemPage({ onAddItem, onNavigate}) {
 
                 {/* photo upload */}
                 <div className="form-group">
-                    <label htmlFor="item-photo"> Photo(Optional) </label>
+                    <label htmlFor="item-photo"> Photo(Optional): </label>
                     <input
                         type="file"
                         id="item-photo"
@@ -161,8 +165,8 @@ function AddItemPage({ onAddItem, onNavigate}) {
 
                     {/* Submit */}
                 <div className="form-actions">
-                    <button type="submit"> Add Item </button>
-                    <button type="button" onClick={() => onNavigate('home')}> Cancel </button>
+                    <button type="submit" className="btn-primary"> Add Item </button>
+                    <button type="button" className="btn-secondary" onClick={() => onNavigate('home')}> Cancel </button>
                 </div>
 
 
