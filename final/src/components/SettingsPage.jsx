@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
-import SettingsCard from "./SettingsCard.jsx";
-import SettingsCardPassword from "./SettingsCardPassword.jsx";
+import SettingsCard from "../components/SettingsCard.jsx";
+import SettingsCardPassword from "../components/SettingsCardPassword.jsx";
 
 import "../styles/settings.css"
 
@@ -177,7 +177,7 @@ function SettingsPage({userProfile, onUpdateUserProfile, onChangePassword, theme
                                         className="save-btn"
                                         onClick={() => {
 
-                                            onUpdateUserProfile({ avatarUrl: avatarSelected })
+                                            onUpdateUserProfile({ avatarUrl: avatarSelected });
                                             setAvatarEditing(false);
                                         }}
                                         aria-label="Save Avatar"

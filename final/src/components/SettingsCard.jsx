@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect} from "react";
-import SettingsPage from "./SettingsPage.jsx";
+
 
 function SettingsCard({label, type, value, options = [], onSave, validate}) {
 
@@ -27,7 +27,7 @@ function SettingsCard({label, type, value, options = [], onSave, validate}) {
     function cancel() {
         setEditing(false);
         setInput(value);
-        setError("")
+        setError("");
     }
 
     return (

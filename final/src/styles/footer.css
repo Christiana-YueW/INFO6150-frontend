@@ -178,16 +178,16 @@
   }
 }
 
-@media (max-width: 22.5rem) {
+@media (max-width: 30rem) {
   .site-footer {
-    padding: 1.5rem 1rem 0.75rem;
+    padding: 1rem 1rem 0.75rem;
   }
 
   .brand__link {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .brand__logo {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
   }
 }

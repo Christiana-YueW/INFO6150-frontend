@@ -1,5 +1,5 @@
 import { useState, useEffect} from "react";
-import SettingsPage from "./SettingsPage.jsx";
+
 
 function SettingsCardPassword({label, onSave}) {
 

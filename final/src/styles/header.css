@@ -289,7 +289,7 @@
 }
 
 /* for small screen */
-@media (max-width: 22.5rem) {
+@media (max-width: 30rem) {
 
   .header-title {
     font-size: 1.5rem;

@@ -1,10 +1,3 @@
-.home-page {
-  padding: 2rem 1rem;
-  max-width: 75rem;
-
-  margin: 0 auto;
-}
-
 .introduction {
   text-align: center;
   max-width: 40rem;
@@ -226,7 +219,7 @@
 /* small!!! */
 
 
-@media (max-width: 22.5rem) {
+@media (max-width: 30rem) {
   .introduction h1 {
     font-size: 1.55rem;
   }

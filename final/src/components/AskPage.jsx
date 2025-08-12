@@ -8,8 +8,8 @@ function AskPage({ items = [], userProfile }) {
       id: "m0",
       role: "assistant",
       text:
-        "Hi! Ask me about your items. Try: “Where is camera?” or “Find charger”. " +
-        "I’ll search your saved items and tell you the location.",
+        `Hi${userProfile?.name ? `, ${userProfile.name}` : ""}!
+         Ask me about your items. Try: "Where is camera?" or "Find charger". `,
       ts: Date.now(),
     },
     ]));
@@ -53,8 +53,8 @@ function AskPage({ items = [], userProfile }) {
     if (e.key === "Enter" && !e.shiftKey) {
       e.preventDefault();
 
-      const fakeEvent = { preventDefault(){} };
-      handleSubmit(fakeEvent);
+
+      handleSubmit(e);
     }
   }
 
@@ -129,7 +129,11 @@ function answer(query, items) {
 
 
   if (
-      q === "list" || q === "show all" || q === "all items"
+      q === "list" ||
+      q === "show all" ||
+      q === "all items" ||
+      q === "list all items" ||
+      q.includes("list all")
   ) {
 
     if (items.length === 0) {
@@ -147,8 +151,9 @@ function answer(query, items) {
 
   const matches = items.filter((item) => {
     const itemName = item.name.toLowerCase();
+    const itemLocation = item.location.toLowerCase();
 
-    return words.some((words) => itemName.includes(words));
+    return words.some((word) => itemName.includes(word) || itemLocation.includes(word) );
   });
 
   if (matches.length === 1) {
