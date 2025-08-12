@@ -14,7 +14,6 @@
   margin-bottom: 2rem;
 }
 
-/* Settings sections - match your other pages */
 .settings-section {
   background: white;
 
@@ -34,7 +33,6 @@
   margin: 0 0 1rem 0;
 }
 
-/* Settings card - individual items */
 .settings-card {
   background: #FFFEF5;
 
@@ -67,7 +65,6 @@
   color: #666666;
 }
 
-/* Form inputs - match add.css */
 .settings-input,
 .settings-select {
   width: 60%;
@@ -90,7 +87,6 @@
   background: white;
 }
 
-/* Password fields */
 .settings-pass-fields {
   display: flex;
   flex-direction: column;
@@ -105,14 +101,12 @@
   color: #333333;
 }
 
-/* Buttons container */
 .settings-options {
   display: flex;
   gap: 2rem;
   margin-top: 1rem;
 }
 
-/* Edit button */
 .edit-btn {
   padding: 0.4rem 0.8rem;
 
@@ -135,7 +129,6 @@
   transform: translateY(-1px);
 }
 
-/* Save button - match add.css btn-primary */
 .save-btn {
   padding: 0.4rem 0.6rem;
 
@@ -158,7 +151,6 @@
   transform: translateY(-1px);
 }
 
-/* Cancel button */
 .cancel-btn {
   padding: 0.4rem 0.6rem;
 
@@ -181,7 +173,6 @@
   transform: translateY(-1px);
 }
 
-/* Focus states for all buttons */
 .edit-btn:focus-visible,
 .save-btn:focus-visible,
 .cancel-btn:focus-visible {
@@ -189,7 +180,6 @@
   outline-offset: 3px;
 }
 
-/* Validation messages - match add.css error style */
 .validation-msg {
   margin-top: 0.5rem;
   padding: 0.25rem 0.5rem;
@@ -204,7 +194,6 @@
   font-weight: 500;
 }
 
-/* Avatar selection */
 .preset-strip {
   display: flex;
 
@@ -248,7 +237,6 @@
   object-fit: cover;
 }
 
-/* Avatar preview */
 .avatar-preview-row {
   display: inline-flex;
   align-items: center;
@@ -271,7 +259,6 @@
   color: #666666;
 }
 
-/* Theme radio buttons */
 fieldset {
   border: none;
   padding: 0;
@@ -308,7 +295,6 @@ legend {
   color: #FFB800;
 }
 
-/* Responsive design - match other pages */
 @media (max-width: 48rem) {
   .setting-page {
     padding: 1rem 0.5rem;
@@ -351,7 +337,6 @@ legend {
   }
 }
 
-/* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
   .settings-input,
   .settings-select,

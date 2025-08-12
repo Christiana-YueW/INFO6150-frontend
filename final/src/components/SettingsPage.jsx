@@ -239,7 +239,7 @@ function SettingsPage({userProfile, onUpdateUserProfile, onChangePassword, theme
 
 
 
-            {/*5. theme change  */}
+            {/*theme change  */}
             {typeof onSetTheme === "function" && (
                 <form className="settings-section" onSubmit={(e) => e.preventDefault()} noValidate>
 
