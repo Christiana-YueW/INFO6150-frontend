@@ -70,11 +70,11 @@ function HomePage({items, onNavigate, userProfile}) {
 
               <div className="cards-panel quick-actions-panel">
 
-                <button className="card-button" onClick={() => onNavigate('add')}>
+                <button className="card-button" onClick={() => onNavigate('add')} aria-label="go to add page">
                   Add New Item
                 </button>
 
-                <button className="card-button" onClick={() => onNavigate('browse')}>
+                <button className="card-button" onClick={() => onNavigate('browse')} aria-label="go to browse page">
                   Browse My Items
                 </button>
               </div>

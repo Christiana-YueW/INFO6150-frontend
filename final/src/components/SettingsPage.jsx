@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect} from "react";
 import SettingsCard from "../components/SettingsCard.jsx";
 import SettingsCardPassword from "../components/SettingsCardPassword.jsx";
 

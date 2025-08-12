@@ -11,10 +11,10 @@ function Footer({ userName = "Jane Smith", onNavigate}) {
 
 
 
-          <button className="brand__link" aria-label="go to HomePage" onClick={() => onNavigate('home')}>
-            <span className="brand__logo" aria-hidden="true">📦< /span>
+          <a href="#home" className="brand__link" aria-label="go to HomePage" onClick={() => onNavigate('home')}>
+            <span className="brand__logo" aria-hidden="true">📦</span>
             <span className="brand__name"> FindMyStuff </span>
-          </button>
+          </a>
 
           <div className="brand__info">
 

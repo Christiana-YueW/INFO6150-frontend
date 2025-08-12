@@ -86,7 +86,7 @@ function BrowsePage({items = []}) {
                         id="browse-filter"
                         value={locationFilter}
                         onChange={(e) => setLocationFilter(e.target.value)}
-                        aria-label="filter by location"
+                        aria-label="Filter by location"
                     >
                         {getLocationOptions().map((loc) => (
 
@@ -106,7 +106,7 @@ function BrowsePage({items = []}) {
                         id="browse-sort"
                         value={sortOption}
                         onChange={(e) => setSortOption(e.target.value)}
-                        aria-label="sort the items"
+                        aria-label="Sort the items"
                     >
 
                         <option value="name-asc">Name (A → Z)</option>
