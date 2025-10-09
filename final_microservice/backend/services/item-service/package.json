@@ -1,0 +1,21 @@
+{
+  "name": "item-service",
+  "version": "1.0.0",
+  "description": "Item CRUD operations service",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": ["microservice", "items", "crud"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "pg": "^8.11.3"
+  }
+}
+

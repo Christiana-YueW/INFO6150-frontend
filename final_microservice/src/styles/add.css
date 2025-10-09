@@ -1,0 +1,229 @@
+.add-page h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+
+  color: #333333;
+  text-align: center;
+
+  margin-bottom: 2rem;
+}
+
+.add-form {
+  max-width: 40rem;
+  margin: 0 auto;
+
+  background: white;
+
+  padding: 2rem;
+
+  border: 2px solid rgba(255, 220, 0, 0.2);
+  border-radius: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  display: block;
+
+  margin-bottom: 0.15rem;
+
+  font-weight: 600;
+  font-size: 1rem;
+
+  color: #333333;
+}
+
+.form-group input[type="text"],
+.form-group select {
+  width: 100%;
+  padding: 0.75rem;
+
+  font-size: 1rem;
+  font-family: inherit;
+
+  border: 2px solid rgba(255, 220, 0, 0.3);
+
+  border-radius: 0.5rem;
+  background: #FFFEF5;
+  transition: all 0.2s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group select:focus {
+  outline: none;
+
+  border-color: #FFB800;
+  background: white;
+
+  box-shadow: 0 0 0 3px rgba(255, 184, 0, 0.1);
+}
+
+.form-group input[type="file"] {
+  width: 100%;
+
+  padding: 0.5rem;
+
+  font-size: 0.95rem;
+  font-family: inherit;
+
+  border: 2px dashed rgba(255, 220, 0, 0.3);
+  border-radius: 0.5rem;
+  background: #FFFEF5;
+  cursor: pointer;
+}
+
+.form-group input[type="file"]:hover {
+  border-color: #FFB800;
+  background: white;
+}
+
+.form-group input[type="file"]:focus {
+  outline: 2px solid #FFB800;
+  outline-offset: 2px;
+}
+
+.error {
+  margin-top: 0.5rem;
+  padding: 0.2rem 0.5rem;
+
+  background: #FFF3CD;
+
+  border-left: 2px solid #FF6B6B;
+  border-radius: 0.25rem;
+
+  color: #CC0000;
+
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+input[aria-invalid="true"],
+select[aria-invalid="true"] {
+  border-color: #FF6B6B;
+  background: #FFF5F5;
+}
+
+.photo-preview {
+  margin-top: 1rem;
+  padding: 1rem;
+
+  background: #FFFEF5;
+
+  border: 2px solid rgba(255, 220, 0, 0.2);
+  border-radius: 0.5rem;
+
+  text-align: center;
+}
+
+.photo-preview img {
+  display: block;
+
+  max-width: 100%;
+  max-height: 15rem;
+  margin: 0 auto;
+
+  border-radius: 0.5rem;
+}
+
+.form-actions {
+  display: flex;
+
+  gap: 2.5rem;
+  margin-top: 2.5rem;
+}
+
+.btn-primary,
+.btn-secondary {
+  flex: 1;
+  padding: 0.875rem 1.5rem;
+
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: inherit;
+
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #FFD54F 0%, #FFCA28 100%);
+  color: white;
+  box-shadow: 0 2px 8px rgba(255, 213, 79, 0.25);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #FFE082 0%, #FFD54F 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 213, 79, 0.3);
+}
+
+.btn-primary:focus-visible {
+  outline: 2px solid #FFB800;
+  outline-offset: 3px;
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, #FFE082 0%, #FFD54F 100%);
+  color: white;
+  box-shadow: 0 2px 8px rgba(255, 213, 79, 0.25);
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(135deg, #FFF3B8 0%, #FFE082 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 213, 79, 0.3);
+}
+
+.btn-secondary:focus-visible {
+  outline: 2px solid #FFB800;
+  outline-offset: 3px;
+}
+
+@media (max-width: 48rem) {
+  .add-page {
+    margin: 1rem auto;
+    padding: 0 0.5rem;
+  }
+
+  .add-form {
+    padding: 1.5rem;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+  }
+}
+
+@media (max-width: 30rem) {
+  .add-page {
+    padding: 1rem 0.5rem;
+  }
+
+  .add-form {
+    padding: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .form-group input,
+  .form-group select,
+  .btn-primary,
+  .btn-secondary,
+  .photo-remove {
+    transition: none;
+  }
+
+  .btn-primary:hover {
+    transform: none;
+  }
+}

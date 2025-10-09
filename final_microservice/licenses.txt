@@ -1,0 +1,47 @@
+Images from Unsplash:
+
+1. Image: weblogo.jpg
+   File Name: public/weblogo.jpg
+   URL: https://unsplash.com/photos/a-desk-with-a-computer-and-speakers-on-it-Qtu3hGinLF8
+   License: https://unsplash.com/license
+
+
+2. Image: avatar1-white.jpg
+   File Name: public/avatar1-white.jpg
+   URL: https://unsplash.com/photos/white-kitten-Tn8DLxwuDMA
+   License: https://unsplash.com/license
+
+3. Image: avatar2-scarf.jpg
+   File Name: public/avatar2-scarf.jpg
+   URL: https://unsplash.com/photos/brown-tabby-cat-7GX5aICb5i4
+   License: https://unsplash.com/license
+
+4. Image: avatar3-orange.jpg
+   File Name: public/avatar3-orange.jpg
+   URL: https://unsplash.com/photos/orange-tabby-cat-in-brown-cardboard-box-mrTydVjg04o
+   License: https://unsplash.com/license
+
+5. Image: avatar-default.jpg
+   File Name: public/avatar-default.jpg
+   URL: https://unsplash.com/photos/a-colorful-hot-air-balloon-Y6FScgpL2OA
+   License: https://unsplash.com/license
+
+6. Image: camera.jpg
+   File Name: public/camera.jpg
+   URL: https://unsplash.com/photos/canon-dslr-camera-on-brown-wooden-table-during-daytime-gGgoDJRD2WM
+   License: https://unsplash.com/license
+
+7. Image: bag.jpg
+   File Name: public/bag.jpg
+   URL: https://unsplash.com/photos/blue-backpack-_H0fjILH5Vw
+   License: https://unsplash.com/license
+
+8. Image: phonecharger.jpg
+   File Name: public/phonecharger.jpg
+   URL: https://unsplash.com/photos/a-couple-of-white-wires-sitting-next-to-each-other-f0EpYkZ-cp4
+   License: https://unsplash.com/license
+
+9. Image: dyson.jpg
+   File Name: public/dyson.jpg
+   URL: https://unsplash.com/photos/a-person-using-a-vacuum-to-clean-a-carpet-cpIgNaazQ6w
+   License: https://unsplash.com/license

@@ -1,0 +1,32 @@
+{
+  "name": "find-my-stuff-backend",
+  "version": "1.0.0",
+  "description": "Microservices backend for Find My Stuff application",
+  "type": "module",
+  "scripts": {
+    "start": "node scripts/start-all.js",
+    "start:gateway": "cd api-gateway && npm start",
+    "start:user": "cd services/user-service && npm start",
+    "start:item": "cd services/item-service && npm start",
+    "start:search": "cd services/search-service && npm start",
+    "start:ai": "cd services/ai-assistant-service && npm start",
+    "start:analytics": "cd services/analytics-service && npm start",
+    "dev": "node scripts/dev-all.js",
+    "setup": "npm run install:all && npm run db:setup",
+    "install:all": "npm install && cd api-gateway && npm install && cd ../services/user-service && npm install && cd ../item-service && npm install && cd ../search-service && npm install && cd ../ai-assistant-service && npm install && cd ../analytics-service && npm install",
+    "db:setup": "node database/migrations/run-migrations.js",
+    "db:seed": "node database/seeds/run-seeds.js",
+    "test": "echo \"Tests coming soon\" && exit 0"
+  },
+  "keywords": ["microservices", "express", "postgresql", "rest-api"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "pg": "^8.11.3"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
+
