@@ -33,21 +33,16 @@ The app is designed around a small household-item management workflow:
 
 ## 👀 Preview
 
-### Home Dashboard
-
-![Home dashboard](./public/screenshots/home.png)
-
-### Add Item Flow
-
-![Add item page](./public/screenshots/add.png)
-
-### Browse Experience
-
-![Browse page](./public/screenshots/browse.png)
-
-### Ask Interface
-
-![Ask page](./public/screenshots/ask.png)
+<table>
+  <tr>
+    <td align="center"><strong>Home Dashboard</strong><br/><img src="./public/screenshots/home.png" width="320" alt="Home dashboard screenshot"/></td>
+    <td align="center"><strong>Add Item Flow</strong><br/><img src="./public/screenshots/add.png" width="320" alt="Add item page screenshot"/></td>
+  </tr>
+  <tr>
+    <td align="center"><strong>Browse Experience</strong><br/><img src="./public/screenshots/browse.png" width="320" alt="Browse page screenshot"/></td>
+    <td align="center"><strong>Ask Interface</strong><br/><img src="./public/screenshots/ask.png" width="320" alt="Ask page screenshot"/></td>
+  </tr>
+</table>
 
 ---
 
