@@ -35,14 +35,16 @@ The app is designed around a small household-item management workflow:
 
 <table>
   <tr>
-    <td align="center"><strong>Home Dashboard</strong><br/><img src="./public/screenshots/home.png" width="320" alt="Home dashboard screenshot"/></td>
-    <td align="center"><strong>Add Item Flow</strong><br/><img src="./public/screenshots/add.png" width="320" alt="Add item page screenshot"/></td>
+    <td align="center"><strong>Home Dashboard</strong><br/><a href="./public/screenshots/home.png"><img src="./public/screenshots/home.png" width="220" alt="Home dashboard screenshot"/></a></td>
+    <td align="center"><strong>Add Item Flow</strong><br/><a href="./public/screenshots/add.png"><img src="./public/screenshots/add.png" width="220" alt="Add item page screenshot"/></a></td>
   </tr>
   <tr>
-    <td align="center"><strong>Browse Experience</strong><br/><img src="./public/screenshots/browse.png" width="320" alt="Browse page screenshot"/></td>
-    <td align="center"><strong>Ask Interface</strong><br/><img src="./public/screenshots/ask.png" width="320" alt="Ask page screenshot"/></td>
+    <td align="center"><strong>Browse Experience</strong><br/><a href="./public/screenshots/browse.png"><img src="./public/screenshots/browse.png" width="220" alt="Browse page screenshot"/></a></td>
+    <td align="center"><strong>Ask Interface</strong><br/><a href="./public/screenshots/ask.png"><img src="./public/screenshots/ask.png" width="220" alt="Ask page screenshot"/></a></td>
   </tr>
 </table>
+
+<p align="center"><sub>Click any preview to open the full-size screenshot.</sub></p>
 
 ---
 
