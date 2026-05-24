@@ -1,12 +1,12 @@
 {
-  "name": "forms",
+  "name": "cats-power-the-internet",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Responsive interactive frontend project with a hamburger menu, dialog modal, and JavaScript form validation.",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
-  "author": "Brett Ritter <swiftone@swiftone.org>",
+  "author": "Christiana (Yue) Wu",
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.1"
