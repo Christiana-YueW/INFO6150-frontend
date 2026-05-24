@@ -33,16 +33,21 @@ The app is designed around a small household-item management workflow:
 
 ## 👀 Preview
 
-<table>
-  <tr>
-    <td align="center"><strong>Home Dashboard</strong><br/><a href="./public/screenshots/home.png"><img src="./public/screenshots/home.png" width="220" alt="Home dashboard screenshot"/></a></td>
-    <td align="center"><strong>Add Item Flow</strong><br/><a href="./public/screenshots/add.png"><img src="./public/screenshots/add.png" width="220" alt="Add item page screenshot"/></a></td>
-  </tr>
-  <tr>
-    <td align="center"><strong>Browse Experience</strong><br/><a href="./public/screenshots/browse.png"><img src="./public/screenshots/browse.png" width="220" alt="Browse page screenshot"/></a></td>
-    <td align="center"><strong>Ask Interface</strong><br/><a href="./public/screenshots/ask.png"><img src="./public/screenshots/ask.png" width="220" alt="Ask page screenshot"/></a></td>
-  </tr>
-</table>
+### Home Dashboard
+
+[![Home dashboard screenshot](./public/screenshots/home.png)](./public/screenshots/home.png)
+
+### Add Item Flow
+
+[![Add item page screenshot](./public/screenshots/add.png)](./public/screenshots/add.png)
+
+### Browse Experience
+
+[![Browse page screenshot](./public/screenshots/browse.png)](./public/screenshots/browse.png)
+
+### Ask Interface
+
+[![Ask page screenshot](./public/screenshots/ask.png)](./public/screenshots/ask.png)
 
 <p align="center"><sub>Click any preview to open the full-size screenshot.</sub></p>
 
