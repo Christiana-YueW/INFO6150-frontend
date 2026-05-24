@@ -1,12 +1,122 @@
-# React + Vite
+# Find My Stuff
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### React · Vite · Component-Driven UI · Accessible Frontend Patterns
 
-Currently, two official plugins are available:
+Find My Stuff is a React-based single-page application for tracking personal belongings, organizing where they are stored, and quickly searching or asking about them later.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project was built as the final frontend project for INFO6150 and is the strongest showcase item in this repository. It demonstrates how I moved from static HTML/CSS projects into component-based frontend development with React.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📌 Overview
+
+The app is designed around a small household-item management workflow:
+
+- save items with names, locations, and optional photos
+- browse saved items in a searchable and sortable interface
+- view item details in a modal
+- ask simple chat-style questions about stored items
+- update profile, avatar, password, and theme settings
+
+---
+
+## ✨ Key Features
+
+- **React single-page application flow** with page switching managed in app state
+- **Add item workflow** with validation, conditional location input, and image preview
+- **Browse experience** with search, location filtering, sorting, and item detail modal
+- **Chat-style item lookup** that answers simple natural-language questions from saved item data
+- **Profile and settings UI** for editing user information, avatar selection, password updates, and theme switching
+- **Accessibility support** including skip links, focus-visible states, keyboard-friendly navigation, and ARIA attributes
+
+---
+
+## 👀 Preview
+
+### Home Dashboard
+
+![Home dashboard](./public/screenshots/home.png)
+
+### Add Item Flow
+
+![Add item page](./public/screenshots/add.png)
+
+### Browse Experience
+
+![Browse page](./public/screenshots/browse.png)
+
+### Ask Interface
+
+![Ask page](./public/screenshots/ask.png)
+
+---
+
+## 🧩 Main Screens
+
+- `Home` — overview cards, common locations, and quick actions
+- `Add` — form for creating new tracked items
+- `Browse` — searchable and filterable item gallery
+- `Ask` — lightweight conversational lookup interface
+- `Settings` — profile, avatar, password, and theme controls
+
+---
+
+## 🛠 Tech Stack
+
+- React
+- Vite
+- JavaScript (ES modules)
+- CSS
+
+---
+
+## 🗂 Project Structure
+
+- `src/App.jsx` — top-level app state and page routing logic
+- `src/components/` — reusable UI components and page-level views
+- `src/styles/` — page and component styling
+- `public/` — static images and assets
+
+Key components include:
+
+- `Header.jsx`
+- `HomePage.jsx`
+- `AddItemPage.jsx`
+- `BrowsePage.jsx`
+- `AskPage.jsx`
+- `SettingsPage.jsx`
+- `ItemModal.jsx`
+
+---
+
+## ▶️ Run Locally
+
+```bash
+npm install
+npm run dev
+```
+
+Then open the local Vite URL shown in the terminal, typically:
+
+```text
+http://localhost:5173/
+```
+
+---
+
+## 💡 Frontend Skills Demonstrated
+
+- component-based UI design in React
+- state-driven page rendering
+- form validation and conditional fields
+- image preview handling with `FileReader`
+- searchable/filterable/sortable lists
+- modal interaction patterns
+- responsive navigation behavior
+- accessible labels, focus handling, and skip navigation
+
+---
+
+## 🎯 Project Focus
+
+This project is best understood as a frontend product prototype that combines interface design, user interaction flows, accessibility considerations, and React state management into one cohesive application.

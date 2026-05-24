@@ -1,12 +1,12 @@
 {
-  "name": "forms",
+  "name": "horse-world",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Responsive multi-page website built with semantic HTML, CSS, and Express for INFO6150.",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
-  "author": "Brett Ritter <swiftone@swiftone.org>",
+  "author": "Christiana (Yue) Wu",
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.1"
